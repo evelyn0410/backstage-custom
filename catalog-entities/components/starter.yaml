@@ -10,7 +10,7 @@ metadata:
       url: https://github.com/evelyn0410/starter
   annotations:
     github.com/project-slug: evelyn0410/starter
-    backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml
+    #backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml
     jenkins.io/job-full-name: starter
     sonarqube.org/project-key: default/evelyn0410_starter
     nexus-repository-manager/docker.image-name: starter
