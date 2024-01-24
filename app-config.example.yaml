@@ -48,3 +48,14 @@ catalog:
     # Note: integrations.github[].apps must be correctly configured to read GitHub locations
     - type: file
       target: ../../catalog-entities/all.yaml
+    # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    # - type: file
+    #   target: ../../catalog-entities/all.yaml
+    # - type: file
+    #   target: ../../catalog-entities/template/template.yaml
+    #   rules:
+    #     - allow: [Template]
+    # - type: file
+    #   target: ../../catalog-entities/org.yaml
+    #   rules:
+    #     - allow: [User, Group]

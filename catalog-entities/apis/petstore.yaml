@@ -6,8 +6,8 @@ metadata:
 spec:
   type: grpc
   lifecycle: experimental
-  owner: JinSeulPark
-  system: openmsa
+  owner: team-devops
+  system: openmsa-system
   definition: |
     syntax = "proto3";
 

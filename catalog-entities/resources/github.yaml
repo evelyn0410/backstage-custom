@@ -11,5 +11,5 @@ metadata:
 spec:
   type: repository
   lifecycle: production
-  owner: devops
+  owner: team-devops
   system: openmsa-system
