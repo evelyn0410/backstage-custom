@@ -1,9 +1,9 @@
 app:
-  title: OpenMSA Backstage Showcase
+  title: OpenMSA IDP
   baseUrl: http://localhost:3000
 
 organization:
-  name: OpenMSA
+  name: openmsa
 
 backend:
   # Required for authentication. This secret is shared by all backend plugins.

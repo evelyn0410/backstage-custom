@@ -15,4 +15,4 @@ spec:
   type: identity-provider
   lifecycle: production
   owner: team-devops
-  system: openmsa-system
+  system: openmsa-idp

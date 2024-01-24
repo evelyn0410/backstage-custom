@@ -7,7 +7,7 @@ spec:
   type: grpc
   lifecycle: experimental
   owner: team-devops
-  system: openmsa-system
+  system: openmsa-idp
   definition: |
     syntax = "proto3";
 

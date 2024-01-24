@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: openmsa-system
-  title: openmsa
+  name: openmsa-idp
+  title: OpenMSA-IDP
 spec:
   owner: team-devops
