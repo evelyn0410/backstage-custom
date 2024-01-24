@@ -19,7 +19,7 @@ metadata:
 spec:
   type: service
   system: openmsa-system
-  owner: develop
+  owner: team-develop
   lifecycle: production
   dependsOn:
     - resource:argocd
