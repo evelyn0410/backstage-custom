@@ -47,6 +47,10 @@ catalog:
       target: https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/all.yaml
     - type: url
       target: https://github.com/evelyn0410/janus-software-templates/blob/main/showcase-templates.yaml
+    - type: url
+      target: https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/users.yaml
+      rules:
+        - allow: [User]
   # providers:
   #   ocm:
   #     env: # Key is reflected as provider ID. Defines and claims plugin instance ownership of entities
