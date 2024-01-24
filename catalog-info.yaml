@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-custom
+  description: An example of a Backstage application.
+  annotations:
+    github.com/project-slug: backstage/backstage
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  owner: team-devops
+  lifecycle: experimental

@@ -1,0 +1,190 @@
+app:
+  title: OpenMSA Backstage App
+  baseUrl: http://localhost:3000
+
+organization:
+  name: OpenMSA
+
+backend:
+  # Used for enabling authentication, secret is shared by all backend plugins
+  # See https://backstage.io/docs/auth/service-to-service-auth for
+  # information on the format
+  # auth:
+  #   keys:
+  #     - secret: ${BACKEND_SECRET}
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+    # Uncomment the following host directive to bind to specific interfaces
+    # host: 127.0.0.1
+  csp:
+    connect-src:
+      - "'self'"
+      - 'http:'
+      - 'https:'
+    # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
+    # Default Helmet Content-Security-Policy values can be removed by setting the key to false
+  cors:
+    origin: http://localhost:3000
+    methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
+    credentials: true
+  # This is for local development only, it is not recommended to use this in production
+  # The production database configuration is stored in app-config.production.yaml
+  database:
+    client: better-sqlite3
+    connection: ':memory:'
+  # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
+
+
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, Group, Resource, Location, Template, API]
+  locations:
+    # Local example data, file locations are relative to the backend process, typically `packages/backend`
+    - type: file
+      target: ../../catalog-entities/all.yaml
+    # - type: file
+    #   target: ../../catalog-entities/template/template.yaml
+    #   rules:
+    #     - allow: [Template]
+    # - type: file
+    #   target: ../../catalog-entities/org.yaml
+    #   rules:
+    #     - allow: [User, Group]
+
+
+  # providers:
+  #   ocm:
+  #     env: # Key is reflected as provider ID. Defines and claims plugin instance ownership of entities
+  #       kubernetesPluginRef: k3s # Match the cluster name in kubernetes plugin config
+  #       # The remaining OCM configurations are ignored if kubernetesPluginRef is provided (with exception of schedule and owner)
+  #       # ... Other OCM Configurations
+
+ 
+integrations:
+  github:
+    - host: github.com
+      # This is a Personal Access Token or PAT from GitHub. You can find out how to generate this token, and more information
+      # about setting up the GitHub integration here: https://backstage.io/docs/getting-started/configuration#setting-up-a-github-integration
+      token: ${GITHUB_TOKEN}
+      apiBaseUrl: ${GITHUB_URL}
+    ### Example for how to add your GitHub Enterprise instance using the API:
+    # - host: ghe.example.net
+    #   apiBaseUrl: https://ghe.example.net/api/v3
+    #   token: ${GHE_TOKEN}
+
+proxy:
+  endpoints:
+  # Plugin: Nexus Repository Manager
+    '/nexus-repository-manager':
+      target: ${NEXUS_REPOSITORY_MANAGER_URL}
+      headers:
+        X-Requested-With: 'XMLHttpRequest'
+        # Uncomment the following line to access a private Nexus Repository Manager using a token
+        # Authorization: 'Bearer <YOUR TOKEN>'
+        Authorization: Basic YWRtaW46b3Nja29yZWEh
+      changeOrigin: true
+      # Change to "false" in case of using self hosted Nexus Repository Manager instance with a self-signed certificate
+      secure: true
+  # Plugin: Argocd
+    '/argocd/api':
+      # url to the api of your hosted argoCD instance
+      target: ${ARGOCD_URL}/api/v1/
+      changeOrigin: true
+      # only if your argocd api has self-signed cert
+      secure: false
+      headers:
+        Cookie:
+          $env: ARGOCD_AUTH_TOKEN
+  ### Example for how to add a proxy endpoint for the frontend.
+  ### A typical reason to do this is to handle HTTPS and CORS for internal services.
+  # endpoints:
+  #   '/test':
+  #     target: 'https://example.com'
+  #     changeOrigin: true
+
+# Reference documentation http://backstage.io/docs/features/techdocs/configuration
+# Note: After experimenting with basic setup, use CI/CD to generate docs
+# and an external cloud storage when deploying TechDocs for production use-case.
+# https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
+techdocs:
+  builder: 'local' # Alternatives - 'external'
+  generator:
+    runIn: 'docker' # Alternatives - 'local'
+  publisher:
+    type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
+
+auth:
+  # see https://backstage.io/docs/auth/ to learn about auth providers
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: ${AUTH_GITHUB_CLIENT_ID}
+        clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+        ## uncomment if using GitHub Enterprise
+        # enterpriseInstanceUrl: ${AUTH_GITHUB_ENTERPRISE_INSTANCE_URL}
+
+scaffolder:
+  # see https://backstage.io/docs/features/software-templates/configuration for software template options
+
+argocd:
+  # optional: this will link to your argoCD web UI for each argoCD application
+  baseUrl: ${ARGOCD_URL}
+  # ArgoCDHistoryCard > Limit the number of revisions to load
+  revisionsToLoad: 3
+
+# Plugin: Jenkins
+jenkins:
+  baseUrl: ${JENKINS_URL}
+  username: admin
+  apiKey: ${JENKINS_TOKEN}
+  # instances:
+  #   - name: admin
+  #     baseUrl: ${JENKINS_URL}
+  #     username: admin
+  #     apiKey: ${JENKINS_TOKEN}
+  # optionally add extra headers
+  extraRequestHeaders:
+    Authorization: Basic YWRtaW46MTE3MGU4MmIyYTIyYzUwMTczODY4OGFlOWYyMjUyZmM3Nw==
+
+# Plugin: SonarQube
+sonarqube:
+  baseUrl: ${SONARQUBE_URL}
+  apiKey: ${SONARQUBE_TOKEN}
+  instances:
+    - name: specialProject
+      baseUrl: ${SONARQUBE_URL}
+      apiKey: ${SONARQUBE_TOKEN}
+
+kubernetes:
+  serviceLocatorMethod:
+    type: multiTenant
+  clusterLocatorMethods:
+    - type: config
+      clusters:
+        # minikube
+        # - url: ${K8S_MINIKUBE_URL}
+        #   name: minikube
+        #   authProvider: serviceAccount
+        #   skipTLSVerify: true
+        #   skipMetricsLookup: false
+        #   serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
+        # kind
+        # - url: ${K8S_KIND_URL}
+        #   name: kind-kind
+        #   authProvider: serviceAccount
+        #   skipTLSVerify: true
+        #   skipMetricsLookup: true
+        #   serviceAccountToken: ${K8S_KIND_TOKEN}
+        # k3s
+        - url: ${K8S_K3S_URL}
+          name: k3s
+          authProvider: serviceAccount
+          skipTLSVerify: true
+          skipMetricsLookup: false
+          serviceAccountToken: ${K8S_K3S_TOKEN}
+
