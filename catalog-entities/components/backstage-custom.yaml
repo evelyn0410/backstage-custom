@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: OpenMSA-IDP
+  title: OpenMSA-IDP
+  description: |
+    OpenMSA-IDP
+  links:
+    - title: GitHub
+      url: https://github.com/evelyn0410/backstage-custom
+  annotations:
+    #backstage.io/kubernetes-id: backstage-custom
+    backstage.io/techdocs-ref: dir:.
+    #backstage.io/managed-by-location: url:https://github.com/evelyn0410/backstage-custom/blob/main/catalog-info.yaml
+    github.com/project-slug: evelyn0410/backstage-custom
+    #jenkins.io/job-full-name: backstage-custom
+    #sonarqube.org/project-key: default/evelyn0410_backstage-custom
+    #nexus-repository-manager/docker.image-name: backstage-custom
+    #argocd/app-name: backstage-custom
+spec:
+  type: service
+  system: openmsa-idp
+  owner: team-develop
+  lifecycle: production
+  dependsOn:
+    - resource:argocd
+    - resource:nexus
+    - resource:keycloak
+    - resource:github
+    - resource:sonarqube
