@@ -91,7 +91,7 @@ const techdocsContent = (
   </EntityTechdocsContent>
 );
 
-const jenkinsCard = (
+const ciCard = (
   <EntitySwitch>
     <EntitySwitch.Case if={isJenkinsAvailable}>
       <Grid item sm={6}>
@@ -133,7 +133,7 @@ const jenkinsContent = (
 );
 
 
-const cicdContent = (
+const ciContent = (
   // This is an example of how you can implement your company's logic in entity page.
   // You can for example enforce that all components of type 'service' should use GitHubActions
   <EntitySwitch>
@@ -200,6 +200,18 @@ const overviewContent = (
   <Grid container spacing={3} alignItems="stretch">
     {entityWarningContent}
 
+    <Grid item md={4}>
+      <EntityLinksCard />
+    </Grid>
+
+    <EntitySwitch>
+      <EntitySwitch.Case if={e => Boolean(isArgocdAvailable(e))}>
+        <Grid item md={8} >
+          <EntityArgoCDOverviewCard />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
+
     <Grid item md={6}>
       <EntityAboutCard variant="gridItem" />
     </Grid>
@@ -212,26 +224,10 @@ const overviewContent = (
       </EntitySwitch.Case>
     </EntitySwitch>
 
-    <EntitySwitch>
-      <EntitySwitch.Case if={e => Boolean(isArgocdAvailable(e))}>
-        <Grid item md={6}>
-          <EntityArgoCDOverviewCard />
-        </Grid>
-      </EntitySwitch.Case>
-    </EntitySwitch>
-
-    {jenkinsCard}
+    {ciCard}
 
     <Grid item md={6} xs={12}>
       <EntityCatalogGraphCard variant="gridItem" height={400} />
-    </Grid>
-
-    <Grid item md={8} xs={12}>
-      <EntityHasSubcomponentsCard variant="gridItem" />
-    </Grid>
-
-    <Grid item md={4} xs={12}>
-      <EntityLinksCard />
     </Grid>
 
   </Grid>
@@ -245,11 +241,11 @@ const serviceEntityPage = (
         {overviewContent}
     </EntityLayout.Route>
 
-    <EntityLayout.Route path="/github-actions" title="GitHub Actions">
+    <EntityLayout.Route path="/github-actions" title="GitHub Actions" if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
     </EntityLayout.Route>
 
-    <EntityLayout.Route path="/jenkins" title="Jenkins">
+    <EntityLayout.Route path="/jenkins" title="Jenkins" if={isJenkinsAvailable}>
       {jenkinsContent}
     </EntityLayout.Route>
 
@@ -291,11 +287,9 @@ const serviceEntityPage = (
         <Grid item md={6}>
           <EntityDependsOnResourcesCard variant="gridItem" />
         </Grid>
-      </Grid>
-    </EntityLayout.Route>
-
-    <EntityLayout.Route path="/api" title="API">
-      <Grid container spacing={3} alignItems="stretch">
+        <Grid item md={8} xs={12}>
+          <EntityHasSubcomponentsCard variant="gridItem" />
+        </Grid>
         <Grid item md={6}>
           <EntityProvidedApisCard />
         </Grid>
@@ -304,7 +298,7 @@ const serviceEntityPage = (
         </Grid>
       </Grid>
     </EntityLayout.Route>
-    
+
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>

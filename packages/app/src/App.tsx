@@ -35,6 +35,9 @@ import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInPage } from '@backstage/core-components';
+import { HomepageCompositionRoot, VisitListener } from '@backstage/plugin-home';
+import { HomePage } from './components/home/HomePage';
+import { CustomizableHomePage } from './components/home/CustomizableHomePage';
 
 const app = createApp({
   apis,
@@ -82,6 +85,9 @@ const routes = (
       element={<CatalogEntityPage />}
     >
       {entityPage}
+    </Route>
+    <Route path="/home" element={<HomepageCompositionRoot />}>
+      <CustomizableHomePage />
     </Route>
     <Route path="/docs" element={<TechDocsIndexPage />} />
     <Route
