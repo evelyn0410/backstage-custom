@@ -9,9 +9,10 @@ metadata:
     - title: GitHub
       url: https://github.com/evelyn0410/backstage-custom
   annotations:
-    #backstage.io/kubernetes-id: backstage-custom
     backstage.io/techdocs-ref: dir:.
+    backstage-custom.backstage.io/techdocs-builder: local
     #backstage.io/managed-by-location: url:https://github.com/evelyn0410/backstage-custom/blob/main/catalog-info.yaml
+    #backstage.io/kubernetes-id: backstage-custom
     github.com/project-slug: evelyn0410/backstage-custom
     #jenkins.io/job-full-name: backstage-custom
     #sonarqube.org/project-key: default/evelyn0410_backstage-custom
