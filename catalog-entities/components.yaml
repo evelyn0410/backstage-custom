@@ -6,4 +6,3 @@ metadata:
 spec:
   targets:
     - ./components/starter.yaml
-    - ./components/backstage-custom.yaml
