@@ -1,9 +1,13 @@
-# Backstage - 1.Getting Start
+---
+id: getting-start
+title: Getting Start
+sidebar_label: Getting Start
+description: Documentation on How to get started with Backstage
+---
 
 Created by [박진슬] on 2024 1월 29
 
 
-- [Backstage - 1.Getting Start](#backstage---1getting-start)
 - [개요](#개요)
 - [Create Backstage App {#Backstage-1.GettingStart-CreateBackstageApp}](#create-backstage-app-backstage-1gettingstart-createbackstageapp)
   - [사전 설치 (Prerequisites) {#Backstage-1.GettingStart-사전설치(Prerequisites)}](#사전-설치-prerequisites-backstage-1gettingstart-사전설치prerequisites)

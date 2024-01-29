@@ -1,9 +1,12 @@
-# [ Backstage - 4.Kubernetes ]
+---
+id: Kubernetes
+title: Kubernetes
+sidebar_label: Kubernetes
+description: Monitoring Kubernetes based services with the software catalog
+---
 
 Created by [ 박진슬] on 2024 1월 29
  
- 
-- [\[ Backstage - 4.Kubernetes \]](#-backstage---4kubernetes-)
 - [개요 {#Backstage-4.Kubernetes-개요}](#개요-backstage-4kubernetes-개요)
   - [Your Clusters (Container Monitoring) {#Backstage-4.Kubernetes-YourClusters(ContainerMonitoring)}](#your-clusters-container-monitoring-backstage-4kubernetes-yourclusterscontainermonitoring)
     - [container info, cluster info {#Backstage-4.Kubernetes-containerinfo,clusterinfo}](#container-info-cluster-info-backstage-4kubernetes-containerinfoclusterinfo)

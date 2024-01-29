@@ -1,8 +1,11 @@
-# 3.Plugin
+---
+id: plugins
+title: Intro to plugins
+description: Documentation on Introduction to Plugins
+---
 
 Created by [ 박진슬] on 2024 1월 29
  
-- [3.Plugin](#3plugin)
 - [개요 {#BackStage-3.Plugin-개요}](#개요-backstage-3plugin-개요)
 - [TODO Plugin {#BackStage-3.Plugin-TODOPlugin}](#todo-plugin-backstage-3plugin-todoplugin)
     - [TODO 주석 {#BackStage-3.Plugin-TODO주석}](#todo-주석-backstage-3plugin-todo주석)
@@ -54,20 +57,15 @@ Created by [ 박진슬] on 2024 1월 29
 
 -   **참고**
 
-    -   [Backstage.io
-        검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
-
+    -   [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
     -   **Plugin List \|**
         [https://backstage.io/plugins](https://backstage.io/plugins)
-
     -   **Backstage Demo site \|**
         [https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all](https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all)
-
     -   **RedHat Showcase site \|**
         [https://showcase.janus-idp.io/catalog/default/component/backstage-showcase/kubernetes](https://showcase.janus-idp.io/catalog/default/component/backstage-showcase/kubernetes)
 
-Backstage 에 플러그인을 추가하여 다양한 오픈소스 솔루션과 연동할 수
-있습니다.
+Backstage 에 플러그인을 추가하여 다양한 오픈소스 솔루션과 연동할 수있습니다.
 
 Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 

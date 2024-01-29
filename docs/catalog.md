@@ -1,8 +1,13 @@
-# [ Backstage - 2.Catalog ]
+---
+id: software-catalog-overview
+title: Backstage Software Catalog
+sidebar_label: Overview
+# prettier-ignore
+description: The Backstage Software Catalog
+---
 
 Created by [ 박진슬] on 2024 1월 29
 
-- [\[ Backstage - 2.Catalog \]](#-backstage---2catalog-)
 - [개요 {#Backstage-2.Catalog-개요}](#개요-backstage-2catalog-개요)
   - [What is a Software Catalog? {#Backstage-2.Catalog-WhatisaSoftwareCatalog?}](#what-is-a-software-catalog-backstage-2catalog-whatisasoftwarecatalog)
   - [Catalog 가 가져오는 효과 {#Backstage-2.Catalog-Catalog가가져오는효과}](#catalog-가-가져오는-효과-backstage-2catalog-catalog가가져오는효과)
