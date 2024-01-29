@@ -5,7 +5,7 @@ metadata:
   title: ArgoCD
   description: Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. We use ArgoCD for the deployment of this showcase.
   links:
-    - url: https://192.168.41.52:30000
+    - url: https://argocd-oscka.openmsa.monster/
       title: Instance of ArgoCD
       icon: web
     - url: https://argo-cd.readthedocs.io/en/stable/
