@@ -86,7 +86,7 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 
 ### TODO 주석 {#BackStage-3.Plugin-TODO주석}
 
-[![](assets/973373654/973373805.png?width=760)]
+![](assets/973373654/973373805.png?width=760)
 
 기능구현을 하다보면 시간에 쫓기거나 우선순위때문에 잠깐 미뤄둬야 할
 일들이 있습니다.
@@ -97,7 +97,7 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 
 ### Backstage TODO tab {#BackStage-3.Plugin-BackstageTODOtab}
 
-[![](assets/973373654/973373808.png?width=760)]
+![](assets/973373654/973373808.png?width=760)
 
 Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog \> TODO 탭에서
 확인할 수 있으며, File 을 클릭하면 Github 에 커밋된 파일로 이동할수
@@ -108,13 +108,10 @@ Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog \> TODO 
 -   **참고**
 
     -   [Jenkins Plugin (Frontend)](https://github.com/backstage/backstage/tree/master/plugins/jenkins)
-        
-
     -   [Jenkins Plugin (BackEnd)](https://github.com/backstage/backstage/tree/master/plugins/jenkins-backend)
         
 
-Jenkins Plugin 은 Jenkins 에서 제공하는 ([Jenkins
-공식문서](https://www.jenkins.io/doc/book/using/remote-access-api/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
+Jenkins Plugin 은 Jenkins 에서 제공하는 ([Jenkins 공식문서](https://www.jenkins.io/doc/book/using/remote-access-api/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
 
 ### Jenkins 접속 정보 {#BackStage-3.Plugin-Jenkins접속정보}
 
@@ -126,23 +123,23 @@ Jenkins Plugin 은 Jenkins 에서 제공하는 ([Jenkins
 
 #### Latest Build {#BackStage-3.Plugin-LatestBuild}
 
-[![image-20240111-003324.png](assets/973373654/973373763.png?width=581)]
+![image-20240111-003324.png](assets/973373654/973373763.png?width=581)
 
 #### Jenkins project list {#BackStage-3.Plugin-Jenkinsprojectlist}
 
-[![jenkins-1.png](assets/973373654/973373766.png?width=760)]
+![jenkins-1.png](assets/973373654/973373766.png?width=760)
 
 #### View summary of a build {#BackStage-3.Plugin-Viewsummaryofabuild}
 
-[![jenkins-2.png](assets/973373654/973373760.png?width=531)]
+![jenkins-2.png](assets/973373654/973373760.png?width=531)
 
 #### Jenkins job list {#BackStage-3.Plugin-Jenkinsjoblist}
 
-[![jenkins-3.png](assets/973373654/973373757.png?width=760)]
+![jenkins-3.png](assets/973373654/973373757.png?width=760)
 
 ### Jenkins API Token 발급 {#BackStage-3.Plugin-JenkinsAPIToken발급}
 
-[![](assets/973373654/973373802.png?width=760)]
+![](assets/973373654/973373802.png?width=760)
 
 ### setting {#BackStage-3.Plugin-setting}
 
@@ -173,13 +170,8 @@ jenkins:
     -   User 마다 Jenkins API Token 을 다르게 사용하도록 구분할경우
         instances 하위에 배열형태로 추가하면 됩니다.
 
-```{=html}
-<!-- -->
-```
 -   catalog-info.yaml
 
- 
- 
 ``` 
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -214,11 +206,9 @@ Nexus Repository Manager Plugin 은 Nexus 에서 제공하는 ([Nexus
 
 ### build artifacts 조회 {#BackStage-3.Plugin-buildartifacts조회}
 
-[![](assets/973373654/973373787.png?width=760)]
+![](assets/973373654/973373787.png?width=760)
 
-BUILD ARTIFACTS 탭에는 **VERSION** , **REPOSITORY** , **REPOSITORY
-TYPE** , **MANIFEST** , **MODIFIED** 및 **SIZE** 와 같은 빌드 아티팩트
-및 관련 정보 목록이 포함되어 있습니다 .
+BUILD ARTIFACTS 탭에는 **VERSION** , **REPOSITORY** , **REPOSITORY TYPE** , **MANIFEST** , **MODIFIED** 및 **SIZE** 와 같은 빌드 아티팩트 및 관련 정보 목록이 포함되어 있습니다 .
 
 ### setting {#BackStage-3.Plugin-setting.1}
 
@@ -242,8 +232,8 @@ proxy:
 
 Private Nexus 로 구성돼있을 경우 인증과정이 필요합니다.
 
-Nexus 에서 API 인증은 **username:password**를 **Base64**로 인코딩된 값을
-사용하고 있습니다. base64 커맨드를 사용하여 값을 생성해 줍니다.
+Nexus 에서 API 인증은 **username:password**를 **Base64**로 인코딩된 값을 사용하고 있습니다. 
+base64 커맨드를 사용하여 값을 생성해 줍니다.
 
 > *username이 admin 이고 password가 osckorea! 이면
 >  *`admin:osckorea!` 를 인코딩한 `YWRtaW46b3Nja29yZWEh` 가 `env` 값이
@@ -274,8 +264,7 @@ metadata:
 
     -   `nexus-repository-manager/docker.image-name: starter`
 
-starter 프로젝트의 경우 빌드결과물이 docker image 이므로 dokcer
-어노테이션을 사용했습니다.
+starter 프로젝트의 경우 빌드결과물이 docker image 이므로 dokcer 어노테이션을 사용했습니다.
 
 빌드 결과물이 maven - jar 이거나 npm - package 일경우 **사용가능한
 annotation 확인
@@ -300,13 +289,13 @@ SonarQube Plugin 은 SonarQube 에서 제공하는 ([SonarQube
 
 ### Code Quality 확인 {#BackStage-3.Plugin-CodeQuality확인}
 
-[![image-20240111-003805.png](assets/973373654/973373754.png?width=771)]
+![image-20240111-003805.png](assets/973373654/973373754.png?width=771)]
 
 ### setting {#BackStage-3.Plugin-setting.2}
 
 -   SonarQube Token 발급
 
-[![image-20240111-002306.png](assets/973373654/973373772.png?width=717)]
+![image-20240111-002306.png](assets/973373654/973373772.png?width=717)]
 
 -   app-config.yaml
 
@@ -352,19 +341,17 @@ metadata:
     -   [\[**Optional**\] ArgoCD BackEnd
         Plugin](https://www.npmjs.com/package/@roadiehq/backstage-plugin-argo-cd-backend)
 
-ArgoCD Plugin 은 ArgoCD 에서 제공하는([ArgoCD
-공식문서](https://argo-cd.readthedocs.io/en/stable/developer-guide/api-docs/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
+ArgoCD Plugin 은 ArgoCD 에서 제공하는([ArgoCD 공식문서](https://argo-cd.readthedocs.io/en/stable/developer-guide/api-docs/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
 Backstage 카탈로그에 Application 의 현재 상태를 표시할 수 있습니다.
 
 ### ArgoCD over view {#BackStage-3.Plugin-ArgoCDoverview}
 
-[![image-20240111-021258.png](assets/973373654/973373742.png?width=760)]
-[![](assets/973373654/973373781.png?width=727)]
+![image-20240111-021258.png](assets/973373654/973373742.png?width=760)
+![](assets/973373654/973373781.png?width=727)
 
 아래 정보를 확인할 수 있다.
 
 -   Repo Url
-
 -   Repo Path
 
 -   Destination Server
@@ -375,7 +362,7 @@ Backstage 카탈로그에 Application 의 현재 상태를 표시할 수 있습�
 
 -   Images
 
-[![image-20240111-020629.png](assets/973373654/973373745.png?width=760)]
+![image-20240111-020629.png](assets/973373654/973373745.png?width=760)
 
 Application 의 history 를 조회할 수 있고, history revision Limit 설정도
 가능하다.
@@ -389,7 +376,7 @@ Application 의 history 를 조회할 수 있고, history revision Limit 설정�
 **Argo CD API 를 사용하려면 토큰이 필요하며, 토큰은 Argo CD CLI 또는
 UI를 통해 생성할 수 있습니다.**
 
-[![image-20240111-005435.png](assets/973373654/973373751.png?width=736)]
+![image-20240111-005435.png](assets/973373654/973373751.png?width=736)
 
 Unable to generate new token: account \'admin\' does not have apiKey capability
 admin 계정은 token 발급이 불가능하므로 별도의 계정을 생성하여 token 을 발급합니다.
@@ -403,8 +390,6 @@ admin 사용자에게 apiKey 기능이 없는 이유라는 점을 명심하세�
 
 
 #### argocd user 생성 {#BackStage-3.Plugin-argocduser생성}
-
- 
  
 ``` 
 kubectl edit configmap argocd-cm -n argocd
@@ -423,8 +408,6 @@ kind: ConfigMap
   name: argocd-cm
   namespace: argocd                                       
 ```
-
-
 
 -   `argocd-cm.yaml` configmap 을 수정한다.
 
@@ -452,11 +435,8 @@ kind: ConfigMap
     argocd-rbac-cm configmap에서 관리합니다
 
 -   `argocd-rbac-cm.yaml` 을 수정한다.
-
     -   data 하위에 oscka 계정의 role 을 admin 으로 지정
-
     -   `g, oscka, role:admin`
-
         -   Role definitions and bindings are in the form:
             `g, subject, inherited-subject`
 
@@ -464,10 +444,8 @@ kind: ConfigMap
 
 운영 환경에서는 사용자에 특정 ROLE 을 지정해야하지만, 테스트 단계이므로 본문에서는 admin ROLE 을 부여합니다.
 
-
 #### user password 생성 {#BackStage-3.Plugin-userpassword생성}
 
- 
  
 ``` 
 # -- Get full users list
@@ -482,15 +460,12 @@ oscka  true     apiKey, login
 Password updated
 ```
 
-
-
 -   configmap 을 수정하여 생성한 user 의 password 를 생성해야합니다.
 
     -   admin 계정의 password 필요
 
 #### argocd token 발급 {#BackStage-3.Plugin-argocdtoken발급}
 
- 
  
 ``` 
 # -- Generate auth token
@@ -501,11 +476,9 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJvc2NrYTphcGl
 
 
 
--   해당 shell 에서 발급한 토큰을 `ARGOCD_AUTH_TOKEN` env 에 세팅해주면
-    됩니다.
+-   해당 shell 에서 발급한 토큰을 `ARGOCD_AUTH_TOKEN` env 에 세팅해주면 됩니다.
 
-또는 Argo CD UI의 `/settings/accounts/<your-account>`\"Tokens\" 섹션에서
-\"Generate New\"을 클릭하면 됩니다.
+또는 Argo CD UI의 `/settings/accounts/<your-account>`\"Tokens\" 섹션에서 \"Generate New\"을 클릭하면 됩니다.
 
 #### argocd account 확인 {#BackStage-3.Plugin-argocdaccount확인}
 
@@ -565,25 +538,23 @@ metadata:
 # GitHub Actions Plugin {#BackStage-3.Plugin-GitHubActionsPlugin}
 
 -   **참고**
-
     -   [GitHub Action Plugin](https://github.com/backstage/backstage/tree/master/plugins/github-actions)
 
 ### GitHub Actions 확인 {#BackStage-3.Plugin-GitHubActions확인}
 
-[![image-20240111-024922.png](assets/973373654/973373739.png?width=760)]
+![image-20240111-024922.png](assets/973373654/973373739.png?width=760)
 
 ### **Provide OAuth credentials** {#BackStage-3.Plugin-ProvideOAuthcredentials}
 
-[![github-action-1.png](assets/973373654/973373736.png?width=760)]
-[![image-20240111-043530.png](assets/973373654/973373733.png?width=760)]
+![github-action-1.png](assets/973373654/973373736.png?width=760)
+![image-20240111-043530.png](assets/973373654/973373733.png?width=760)
 
-1.  **[Organizations \> Setting]{.underline}** [**[OAuth
-    App]{.underline}**](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) **[생성]{.underline}**
+1.  **[Organizations \> Setting]{.underline}** [**[OAuth App]{.underline}**](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) **[생성]{.underline}**
 
     1.  callback URL :
         `http://localhost:7007/api/auth/github/handler/frame`
 
-[![github-oauth-2.png](assets/973373654/973373730.png?width=757)]
+![github-oauth-2.png](assets/973373654/973373730.png?width=757)
 
 1.  새로 생성된 앱의 설정 페이지에서 Clinet ID 와 Clinet Secret 을
     가져와 AUTH_GITHUB_CLIENT_ID 및 AUTH_GITHUB_CLIENT_SECRET
@@ -599,7 +570,6 @@ yarn add --cwd packages/app @backstage/plugin-github-actions
 ```
 
 -   app-config.yaml
- 
 ``` 
 # vi app-config.yaml
 integrations:

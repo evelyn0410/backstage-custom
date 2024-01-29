@@ -40,14 +40,12 @@ Created by [ 박진슬] on 2024 1월 29
 
 **참고**
 
--   [Backstage.io
-    검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
-
+-   [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
 -   [https://backstage.io/docs/features/software-catalog/](https://backstage.io/docs/features/software-catalog/)
 
 ## What is a Software Catalog? {#Backstage-2.Catalog-WhatisaSoftwareCatalog?}
 
-[![](assets/973373541/973373619.png)]
+![](assets/973373541/973373619.png)
 
 Backstage 의 Software Catalog (이하 카탈로그)는 ecosystem 의 모든
 소프트웨어(services, websites, libraries, data pipelines, etc)의
@@ -71,7 +69,7 @@ Catalog 는 두 가지 주요 사용 사례를 지원합니다
 
 ## Finding software in the catalog {#Backstage-2.Catalog-Findingsoftwareinthecatalog}
 
-[![bsc-search-51a9aa0cdb9eb883d2bcf2451bc81362.png](assets/973373541/973373595.png?width=760)]
+![bsc-search-51a9aa0cdb9eb883d2bcf2451bc81362.png](assets/973373541/973373595.png?width=760)
 
 기본적으로 catalog 에는 로그인한 사용자의 팀이 소유한 components 가
 표시됩니다.
@@ -84,14 +82,14 @@ components 를 볼 수도 있습니다.
 
 ## Starring components {#Backstage-2.Catalog-Starringcomponents}
 
-[![bsc-starred-7c2f867de967e254b190aac28e55bd0b.png](assets/973373541/973373598.png?width=760)]
+![bsc-starred-7c2f867de967e254b190aac28e55bd0b.png](assets/973373541/973373598.png?width=760)
 
 자주 방문하는 컴포넌트에 쉽고 빠르게 액세스할 수 있도록 백스테이지에서는
 컴포넌트 별표 기능을 지원합니다:
 
 ## Plugins 을 통한 통합 도구 {#Backstage-2.Catalog-Plugins을통한통합도구}
 
-[![image-20240117-010527.png](assets/973373541/973373601.png?width=760)]
+![image-20240117-010527.png](assets/973373541/973373601.png?width=760)
 
 -   소프트웨어 카탈로그는 소프트웨어를 관리하는 데 사용하는 인프라
     도구를 체계적으로 정리할 수 있는 좋은 방법입니다.
@@ -164,14 +162,14 @@ integrations:
 
 ### 1-1. REGISTER EXISTING COMPONENT {#Backstage-2.Catalog-1-1.REGISTEREXISTINGCOMPONENT}
 
-[![](assets/973373541/973373616.png?width=763)]
+![](assets/973373541/973373616.png?width=763)
 
 사용자는 `/create`로 이동하여 **REGISTER EXISTING COMPONENT** 버튼을
 클릭하여 새 컴포넌트를 등록할 수 있습니다.
 
 ### 1-2. YAML의 전체 URL 입력 {#Backstage-2.Catalog-1-2.YAML의전체URL입력}
 
-[![image-20240117-004316.png](assets/973373541/973373610.png?width=760)]
+![image-20240117-004316.png](assets/973373541/973373610.png?width=760)
 
 -   Source control 에 있는 YAML의 전체 URL을 입력해야합니다. (Example:
     [여기](https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/components/artist-lookup-component.yaml))
@@ -183,8 +181,8 @@ integrations:
 
 ### 1-3. BackStage App 에서 component 감지 및 등록 {#Backstage-2.Catalog-1-3.BackStageApp에서component감지및등록}
 
-[![image-20240117-004413.png](assets/973373541/973373607.png?width=760)]
-[![image-20240117-004523.png](assets/973373541/973373604.png?width=760)]
+![image-20240117-004413.png](assets/973373541/973373607.png?width=760)
+![image-20240117-004523.png](assets/973373541/973373604.png?width=760)
 
 컴포넌트가 등록 된것을 확인 할 수 있습니다.
 
@@ -381,8 +379,8 @@ spec:
 Group 은 팀, 사업부 또는 관심사 그룹에 속한 사람들의 느슨한 모임과 같은
 조직 엔티티를 설명합니다.
 
-[![그림1.png](assets/973373541/973373592.png?width=760)]
-[![image-20240124-030659.png](assets/973373541/973373583.png?width=760)]
+![그림1.png](assets/973373541/973373592.png?width=760)
+![image-20240124-030659.png](assets/973373541/973373583.png?width=760)
 
 ### yaml file (group) {#Backstage-2.Catalog-yamlfile(group)}
 
@@ -465,7 +463,7 @@ System 은 하나 또는 여러 개의 API를 노출하거나 사용할 수 있�
 이는 또한 소유 팀이 게시된 아티팩트와 API에 대해 결정할 수 있는 가능성을
 제공합니다.
 
-[![image-20240124-025240.png](assets/973373541/973373589.png?width=760)]
+![image-20240124-025240.png](assets/973373541/973373589.png?width=760)
 
 ### yaml file (system) {#Backstage-2.Catalog-yamlfile(system)}
 -   file location

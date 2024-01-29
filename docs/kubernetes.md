@@ -31,20 +31,15 @@ Created by [ 박진슬] on 2024 1월 29
 
 -   **참고**
 
-    -   [Backstage.io
-        검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
-
-    -   [New Backstage feature: Kubernetes for Service
-        owners](https://backstage.io/blog/2021/01/12/new-backstage-feature-kubernetes-for-service-owners/)
-
-    -   [backstage -
-        kubernetes](https://backstage.io/docs/features/kubernetes/)
+    -   [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
+    -   [New Backstage feature: Kubernetes for Service owners](https://backstage.io/blog/2021/01/12/new-backstage-feature-kubernetes-for-service-owners/)
+    -   [backstage - kubernetes](https://backstage.io/docs/features/kubernetes/)
 
 ## Your Clusters (Container Monitoring) {#Backstage-4.Kubernetes-YourClusters(ContainerMonitoring)}
 
 ### container info, cluster info {#Backstage-4.Kubernetes-containerinfo,clusterinfo}
 
-[![image-20240111-074044.png](assets/973373871/973373913.png?width=760)]
+![image-20240111-074044.png](assets/973373871/973373913.png?width=760)
 
 Backstage의 Kubernetes는 여러 클러스터에서 서비스를 검색하도록 구성할 수
 있습니다. 그런 다음 이를 단일 보기로 집계합니다.
@@ -54,7 +49,7 @@ Backstage의 Kubernetes는 여러 클러스터에서 서비스를 검색하도�
 
 ### Pod describe {#Backstage-4.Kubernetes-Poddescribe}
 
-[![image-20240111-074140.png](assets/973373871/973373910.png?width=736)]
+![image-20240111-074140.png](assets/973373871/973373910.png?width=736)
 
 -   Deployment
 
@@ -76,52 +71,16 @@ Backstage의 Kubernetes는 여러 클러스터에서 서비스를 검색하도�
 
 ### Pod yaml , Log {#Backstage-4.Kubernetes-Podyaml,Log}
 
-[![image-20240111-075600.png](assets/973373871/973373901.png?width=357){.confluence-embedded-image
-.image-wrap-left width="357" loading="lazy"
-image-src="assets/973373871/973373901.png" data-height="920"
-data-width="674" unresolved-comment-count="0"
-linked-resource-id="973373901" linked-resource-version="1"
-linked-resource-type="attachment"
-linked-resource-default-alias="image-20240111-075600.png"
-base-url="https://osc-korea.atlassian.net/wiki"
-linked-resource-content-type="image/png"
-linked-resource-container-id="973373871"
-linked-resource-container-version="1"
-media-id="81c4481a-4da6-4287-9cc8-ee5857097fc9"
-media-type="file"}]{.confluence-embedded-file-wrapper
-.image-left-wrap-wrapper
-.confluence-embedded-manual-size}[![image-20240111-072726.png](assets/973373871/973373922.png?width=380){.confluence-embedded-image
-.image-wrap-right width="380" loading="lazy"
-image-src="assets/973373871/973373922.png" data-height="1040"
-data-width="1920" unresolved-comment-count="0"
-linked-resource-id="973373922" linked-resource-version="1"
-linked-resource-type="attachment"
-linked-resource-default-alias="image-20240111-072726.png"
-base-url="https://osc-korea.atlassian.net/wiki"
-linked-resource-content-type="image/png"
-linked-resource-container-id="973373871"
-linked-resource-container-version="1"
-media-id="a8b11b70-4f82-4632-ba4e-ee4dd4462db5"
-media-type="file"}]{.confluence-embedded-file-wrapper
-.image-right-wrap-wrapper .confluence-embedded-manual-size}
+![image-20240111-075600.png](assets/973373871/973373901.png?width=357)
+
+
+![image-20240111-072726.png](assets/973373871/973373922.png?width=380)
 
 k8s 리소스 를 YAML 형태로 볼수 있고, Pod 의 로그 조회도 가능하다.
 
 ## Error Reporting {#Backstage-4.Kubernetes-ErrorReporting}
 
-[![image-20240111-074416.png](assets/973373871/973373907.png?width=760){.confluence-embedded-image
-.image-center width="760" loading="lazy"
-image-src="assets/973373871/973373907.png" data-height="1040"
-data-width="1920" unresolved-comment-count="0"
-linked-resource-id="973373907" linked-resource-version="1"
-linked-resource-type="attachment"
-linked-resource-default-alias="image-20240111-074416.png"
-base-url="https://osc-korea.atlassian.net/wiki"
-linked-resource-content-type="image/png"
-linked-resource-container-id="973373871"
-linked-resource-container-version="1"
-media-id="6a3a8178-3e0c-44bd-a312-6d2a8456bfb9"
-media-type="file"}]
+![image-20240111-074416.png](assets/973373871/973373907.png?width=760)
 
 Pod , Deployment 등 K8s 리소스에서 Error 가 발생할경우 Error Reporting
 테이블이 생성되며 Cluster Name, k8s api resource 종류와 이름, Message 를
@@ -130,7 +89,6 @@ Pod , Deployment 등 K8s 리소스에서 Error 가 발생할경우 Error Reporti
 # Kubernetes Cluster Config {#Backstage-4.Kubernetes-KubernetesClusterConfig}
 
 -   참고
-
     -   [https://backstage.io/docs/features/kubernetes/installation](https://backstage.io/docs/features/kubernetes/installation)
 
 ### Auth Provider - Service Account Token {#Backstage-4.Kubernetes-AuthProvider-ServiceAccountToken}
@@ -139,7 +97,6 @@ k8s API 를 사용하려면 인증 설정이 필요한데, 기본적인 service 
 Token 을 이용하여 연동했습니다.
 
 #### ClusterRoleBinding 생성 {#Backstage-4.Kubernetes-ClusterRoleBinding생성}
-
  
  
 ``` 
@@ -156,9 +113,7 @@ kubectl create clusterrolebinding default-cluster-admin --clusterrole cluster-ad
 
 #### Generate ServiceAccount Token {#Backstage-4.Kubernetes-GenerateServiceAccountToken}
 
-[**kubernetes 1.24
-미만**](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#no-really-you-must-read-this-before-you-upgrade-1)일 경우 자동으로 생성돼있으므로 아래 커맨드로 확인
-가능합니다.
+[**kubernetes 1.24 미만**](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#no-really-you-must-read-this-before-you-upgrade-1)일 경우 자동으로 생성돼있으므로 아래 커맨드로 확인 가능합니다.
 
  
  
@@ -170,11 +125,8 @@ kubectl -n <NAMESPACE> get secret $(kubectl -n <NAMESPACE> get sa <SERVICE_ACCOU
 ```
 
 
+[**kubernetes 1.24 이상**](https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets)은 아래 방식으로 service account token 을 생성해야합니다.
 
-[**kubernetes 1.24
-이상**](https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets)은 아래 방식으로 service account token 을 생성해야합니다.
-
- 
  
 ``` 
 kubectl apply -f - <<EOF
@@ -189,13 +141,10 @@ type: kubernetes.io/service-account-token
 EOF
 ```
 
-
- 
  
 ``` 
 kubectl -n <NAMESPACE> get secret <SECRET_NAME> -o go-template='{{.data.token | base64decode}}'
 ```
-
 
 
 ### Example deployment.yaml {#Backstage-4.Kubernetes-Exampledeployment.yaml}
@@ -249,8 +198,6 @@ spec:
 
 ## app-config.yaml {#Backstage-4.Kubernetes-app-config.yaml}
 
- 
- 
 ``` 
 kubernetes:
   serviceLocatorMethod:
@@ -299,8 +246,7 @@ metadata:
 
 # 참고 {#Backstage-4.Kubernetes-참고}
 
--   [How to monitor your services on Kubernetes with Backstage
-    (Demo)](https://www.youtube.com/watch?v=VivuOxn3VQ8&t=12s)
+-   [How to monitor your services on Kubernetes with Backstage (Demo)](https://www.youtube.com/watch?v=VivuOxn3VQ8&t=12s)
 
 ### Kubernetes 플러그인 {#Backstage-4.Kubernetes-Kubernetes플러그인}
 

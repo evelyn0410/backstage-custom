@@ -48,15 +48,13 @@ Backstage 의 Frontend 는 [**React**](https://react.dev)
 
 -   **node**
     -   install
-
         -   [https://jin2rang.tistory.com/entry/Window-Nodejs-%EC%84%A4%EC%B9%982](https://jin2rang.tistory.com/entry/Window-Nodejs-%EC%84%A4%EC%B9%982)
             card-appearance="inline" 
 
-    -   nvm 은 node.js 를 여러개의 버전으로 설치하고 관리할 수 있는
-        도구입니다.
-
-    -   node.js 만 설치해도 되지만, Node Version 을 여러개 쓰고 있으므로
-        NVM 을 통해 node js 를 설치했습니다.
+    -   nvm 은 node.js 를 여러개의 버전으로 설치하고 관리할 수 있는 도구입니다.
+        
+    -   node.js 만 설치해도 되지만, Node Version 을 여러개 쓰고 있으므로 NVM 을 통해 node js 를 설치했습니다.
+        
 
 -   **yarn**
 
@@ -66,10 +64,8 @@ Backstage 의 Frontend 는 [**React**](https://react.dev)
 
     -   yarn 은 npm 과 같은 Javascript Package Manager 입니다.
 
-    -   [npm vs
-        yarn](https://joshua1988.github.io/vue-camp/package-manager/npm-vs-yarn.html)
-         : npm 과 yarn 의 차이점은 해당 URL 에서 확인할
-        수 있습니다.
+    -   [npm vs yarn](https://joshua1988.github.io/vue-camp/package-manager/npm-vs-yarn.html)
+         : npm 과 yarn 의 차이점은 해당 URL 에서 확인할 수 있습니다.
 
 ## app 생성 {#Backstage-1.GettingStart-app생성}
 
@@ -104,16 +100,15 @@ PS C:\_DEV\backstage-seul> yarn dev
 
 
 
-`yarn dev` 명령은 프론트엔드와 백엔드를 동일한 창에서 별도의
-프로세스(\[0\]과 \[1\]로 명명) 로 실행합니다.
+`yarn dev` 명령은 프론트엔드와 백엔드를 동일한 창에서 별도의 프로세스(\[0\]과 \[1\]로 명명) 로 실행합니다.
 
 ## 브라우저에서 확인 {#Backstage-1.GettingStart-브라우저에서확인}
 
 [http://localhost:3000](http://localhost:3000)
- 으로 접속하면 아래와같은 Dashboard 를 확인할 수
-있습니다.
+ 으로 접속하면 아래와같은 Dashboard 를 확인할 수 있습니다.
 
-[![](assets/973373498/973373530.png?width=760)]
+
+![](assets/973373498/973373530.png?width=760)
 
 ## General folder structure {#Backstage-1.GettingStart-Generalfolderstructure}
 
