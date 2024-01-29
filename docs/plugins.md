@@ -55,15 +55,12 @@ Created by [ 박진슬] on 2024 1월 29
 
 # 개요 {#BackStage-3.Plugin-개요}
 
--   **참고**
-
-    -   [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
-    -   **Plugin List \|**
-        [https://backstage.io/plugins](https://backstage.io/plugins)
-    -   **Backstage Demo site \|**
-        [https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all](https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all)
-    -   **RedHat Showcase site \|**
-        [https://showcase.janus-idp.io/catalog/default/component/backstage-showcase/kubernetes](https://showcase.janus-idp.io/catalog/default/component/backstage-showcase/kubernetes)
+- **참고**
+  - [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
+  - **Plugin List** [https://backstage.io/plugins](https://backstage.io/plugins)
+  - **Backstage Demo site**[https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all](https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all)
+  - **RedHat Showcase site**[https://showcase.janus-idp.io/catalog/default/component/backstage-showcase/kubernetes](https://showcase.janus-idp.io/catalog/default/component/backstage-showcase/kubernetes)
+        
 
 Backstage 에 플러그인을 추가하여 다양한 오픈소스 솔루션과 연동할 수있습니다.
 
@@ -289,13 +286,13 @@ SonarQube Plugin 은 SonarQube 에서 제공하는 ([SonarQube
 
 ### Code Quality 확인 {#BackStage-3.Plugin-CodeQuality확인}
 
-![image-20240111-003805.png](assets/973373654/973373754.png?width=771)]
+![image-20240111-003805.png](assets/973373654/973373754.png?width=771)
 
 ### setting {#BackStage-3.Plugin-setting.2}
 
 -   SonarQube Token 발급
 
-![image-20240111-002306.png](assets/973373654/973373772.png?width=717)]
+![image-20240111-002306.png](assets/973373654/973373772.png?width=717)
 
 -   app-config.yaml
 
@@ -325,7 +322,6 @@ metadata:
   annotations:
     sonarqube.org/project-key: default/evelyn0410_starter
 ```
-
 
 
 -   annotation 추가

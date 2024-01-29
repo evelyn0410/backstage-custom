@@ -26,7 +26,6 @@ Created by [박진슬] on 2024 1월 29
 # 개요
 
 **참고**
-
 -   [Backstage.io검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
 -   [GettingStarted](https://backstage.io/docs/getting-started/)
     

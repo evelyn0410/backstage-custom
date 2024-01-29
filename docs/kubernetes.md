@@ -30,7 +30,6 @@ Created by [ 박진슬] on 2024 1월 29
 # 개요 {#Backstage-4.Kubernetes-개요}
 
 -   **참고**
-
     -   [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
     -   [New Backstage feature: Kubernetes for Service owners](https://backstage.io/blog/2021/01/12/new-backstage-feature-kubernetes-for-service-owners/)
     -   [backstage - kubernetes](https://backstage.io/docs/features/kubernetes/)

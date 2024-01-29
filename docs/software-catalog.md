@@ -424,13 +424,13 @@ spec:
 -   `team-arch` , `team-develop` , `team-devops` 으로 Group 을 만든후
     type 을 team 으로 지정합니다.
 
--   **[\*\[required\]]{colorid="d943s99fb6"}** `apiVersion` , `kind`
+-   **[\*\[required\]]** `apiVersion` , `kind`
 
     -   `apiVersion` : `backstage.io/v1alpha1`
 
     -   `kind` : `Group`
 
--   **[\*\[required\]]{colorid="yw84938ptk"}** `spec.type`
+-   **[\*\[required\]]** `spec.type`
 
     -   현재 이 필드에 대해 강제적으로 적용되는 값 집합은 없으므로 조직
         계층 구조에 맞는 명명법을 선택하는 것은 채택하는 조직에 맡겨져
@@ -481,13 +481,13 @@ spec:
   owner: team-devops
 ```
 
--   **[\*\[required\]]{colorid="l8mv48vjpx"}** `apiVersion` , `kind`
+-   **[\*\[required\]]** `apiVersion` , `kind`
 
     -   `apiVersion` : `backstage.io/v1alpha1`
 
     -   `kind` : `System`
 
--   **[\*\[required\] ]{colorid="z8c4lzzuct"}**`spec.owner` : 시스템
+-   **[\*\[required\] ]**`spec.owner` : 시스템
     소유자 (엔터티 참조)
 
 -   `spec.domain` : 시스템이 속한 도메인 (엔터티 참조)
