@@ -1,6 +1,6 @@
 ---
 id: plugins
-title: Intro to plugins
+title: Plugins
 description: Documentation on Introduction to Plugins
 ---
 

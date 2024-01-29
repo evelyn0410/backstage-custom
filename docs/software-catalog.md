@@ -1,5 +1,5 @@
 ---
-id: software-catalog-overview
+id: software-catalog
 title: Backstage Software Catalog
 sidebar_label: Overview
 # prettier-ignore

@@ -1,7 +1,6 @@
 ---
 id: getting-start
 title: Getting Start
-sidebar_label: Getting Start
 description: Documentation on How to get started with Backstage
 ---
 
