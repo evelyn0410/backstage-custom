@@ -58,3 +58,4 @@ e2e-test-report/
 start.ps1
 build-local.ps1
 private/
+.idea

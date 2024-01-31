@@ -35,10 +35,6 @@ export const HomePage = () => {
       <Page themeId="home">
         <Content>
           <Grid container justifyContent="center" spacing={2}>
-            <HomePageCompanyLogo
-              className={container}
-              logo={<TemplateBackstageLogo classes={{ svg, path }} />}
-            />
             <Grid container item xs={12} justifyContent="center">
               <HomePageSearchBar
                 InputProps={{

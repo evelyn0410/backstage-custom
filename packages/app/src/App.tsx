@@ -35,13 +35,12 @@ import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 import { SignInPage } from '@backstage/core-components';
-import { HomepageCompositionRoot, VisitListener } from '@backstage/plugin-home';
-import { HomePage } from './components/home/HomePage';
-import { CustomizableHomePage } from './components/home/CustomizableHomePage';
+import { HomepageCompositionRoot } from '@backstage/plugin-home';
+import {HomePage} from "./components/home/HomePage";
 
 const app = createApp({
   apis,
-  components: { // for gitgub login
+  components: { // for GitHub login
     SignInPage: props => (
       <SignInPage
         {...props}
@@ -87,7 +86,7 @@ const routes = (
       {entityPage}
     </Route>
     <Route path="/home" element={<HomepageCompositionRoot />}>
-      <CustomizableHomePage />
+      <HomePage />
     </Route>
     <Route path="/docs" element={<TechDocsIndexPage />} />
     <Route

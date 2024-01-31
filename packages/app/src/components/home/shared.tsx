@@ -22,23 +22,23 @@ export const tools = [
     icon: <TemplateBackstageLogoIcon />,
   },
   {
-    url: 'https://github.com/backstage/backstage',
+    url: 'https://github.com/evelyn0410/backstage-custom',
     label: 'GitHub',
     icon: <TemplateBackstageLogoIcon />,
   },
   {
-    url: 'https://github.com/backstage/backstage/blob/master/CONTRIBUTING.md',
-    label: 'Contributing',
+    url: 'http://192.168.41.50:9000',
+    label: 'SonarQube',
     icon: <TemplateBackstageLogoIcon />,
   },
   {
-    url: 'https://backstage.io/plugins',
-    label: 'Plugins Directory',
+    url: 'https://nexus-oscka.openmsa.monster',
+    label: 'nexus',
     icon: <TemplateBackstageLogoIcon />,
   },
   {
-    url: 'https://github.com/backstage/backstage/issues/new/choose',
-    label: 'Submit New Issue',
+    url: 'https://argocd-oscka.openmsa.monster/',
+    label: 'argocd',
     icon: <TemplateBackstageLogoIcon />,
   },
 ];

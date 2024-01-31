@@ -12,12 +12,12 @@ metadata:
     backstage.io/kubernetes-id: starter
     backstage.io/techdocs-ref: dir:.
     starter.backstage.io/techdocs-builder: local
-    #backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml
     github.com/project-slug: evelyn0410/starter
     jenkins.io/job-full-name: starter
     sonarqube.org/project-key: default/evelyn0410_starter
     nexus-repository-manager/docker.image-name: starter
     argocd/app-name: starter
+    #backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml
 spec:
   type: service
   system: openmsa-idp
