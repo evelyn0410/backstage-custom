@@ -76,7 +76,7 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 
 # TODO Plugin {#BackStage-3.Plugin-TODOPlugin}
 
-**참고 \|**
+**참고**
 [https://github.com/backstage/backstage/tree/master/plugins/todo](https://github.com/backstage/backstage/tree/master/plugins/todo)
 
 소스 코드에서 TODO 주석을 찾아볼 수 있는 Backstage Plugin
@@ -142,7 +142,7 @@ Jenkins Plugin 은 Jenkins 에서 제공하는 ([Jenkins 공식문서](https://w
 
 -   app-config.yaml
  
-``` 
+```yaml
 jenkins:
   baseUrl: ${JENKINS_URL}
   username: admin
@@ -159,8 +159,7 @@ jenkins:
 
 
 
-위에서 발급받은 Jenkins API Token 을 `JENKINS_TOKEN` env 를
-생성하면됩니다.
+위에서 발급받은 Jenkins API Token 을 `JENKINS_TOKEN` env 를 생성하면됩니다.
 
 -   `departmentFoo:`부분을 생략하면 기본 인스턴스로 간주됩니다.
 
@@ -169,7 +168,7 @@ jenkins:
 
 -   catalog-info.yaml
 
-``` 
+```yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -209,9 +208,10 @@ BUILD ARTIFACTS 탭에는 **VERSION** , **REPOSITORY** , **REPOSITORY TYPE** , *
 
 ### setting {#BackStage-3.Plugin-setting.1}
 
--   app-config.yaml
 
-``` 
+
+```yaml
+# app-config.yaml
 proxy:
   endpoints:
     '/nexus-repository-manager':
@@ -238,7 +238,7 @@ base64 커맨드를 사용하여 값을 생성해 줍니다.
 
  
  
-``` 
+```shell
 $ echo -n 'admin:osckorea!' | base64
 YWRtaW46b3Nja29yZWEh
 
@@ -248,7 +248,7 @@ export NEXUS_REPOSITORY_MANAGER_AUTH="YWRtaW46b3Nja29yZWEh"
 
 -   catalog-info.yaml
 
-``` 
+```yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -270,7 +270,7 @@ annotation 확인
 
 # SonarQube Plugin {#BackStage-3.Plugin-SonarQubePlugin}
 
-**참고 \|**
+**참고**
 [https://github.com/backstage/backstage/blob/master/plugins/sonarqube/README.md](https://github.com/backstage/backstage/blob/master/plugins/sonarqube/README.md)
 
 SonarQube Plugin 은 SonarQube 에서 제공하는 ([SonarQube
@@ -295,10 +295,7 @@ SonarQube Plugin 은 SonarQube 에서 제공하는 ([SonarQube
 ![image-20240111-002306.png](assets/973373654/973373772.png?width=717)
 
 -   app-config.yaml
-
- 
- 
-``` 
+```yaml
 sonarqube:
   baseUrl: ${SONARQUBE_URL}
   apiKey: ${SONARQUBE_TOKEN}
@@ -311,10 +308,7 @@ sonarqube:
 
 
 -   catalog-info.yaml
-
- 
- 
-``` 
+```yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -369,15 +363,14 @@ Application 의 history 를 조회할 수 있고, history revision Limit 설정�
 
     -   [https://argo-cd.readthedocs.io/en/stable/operator-manual/user-management/#create-new-user](https://argo-cd.readthedocs.io/en/stable/operator-manual/user-management/#create-new-user)
 
-**Argo CD API 를 사용하려면 토큰이 필요하며, 토큰은 Argo CD CLI 또는
-UI를 통해 생성할 수 있습니다.**
+**Argo CD API 를 사용하려면 토큰이 필요하며, 토큰은 Argo CD CLI 또는 UI를 통해 생성할 수 있습니다.**
 
 ![image-20240111-005435.png](assets/973373654/973373751.png?width=736)
 
 Unable to generate new token: account \'admin\' does not have apiKey capability
 admin 계정은 token 발급이 불가능하므로 별도의 계정을 생성하여 token 을 발급합니다.
 
-**참고 \|**
+**참고**
 [https://github.com/argoproj/argo-cd/issues/14679](https://github.com/argoproj/argo-cd/issues/14679)
 
 API access 에 관리자를 사용하는 것은 전혀 권장되지 않으며, 기본적으로
@@ -387,12 +380,12 @@ admin 사용자에게 apiKey 기능이 없는 이유라는 점을 명심하세�
 
 #### argocd user 생성 {#BackStage-3.Plugin-argocduser생성}
  
-``` 
+```shell
 kubectl edit configmap argocd-cm -n argocd
 ```
  
  
-``` 
+```yaml
 # vi argocd-cm.yaml
 apiVersion: v1
 data:
@@ -411,8 +404,7 @@ kind: ConfigMap
 
 #### 생성한 user role 수정 {#BackStage-3.Plugin-생성한userrole수정}
  
- 
-``` 
+```yaml
 # vi argocd-rbac-cm.yaml
 apiVersion: v1
 data:
@@ -427,23 +419,19 @@ kind: ConfigMap
   namespace: argocd
 ```
 
--   argocd 계정의 권한은 policy.csv파일로 관리하며, policy.csv는
-    argocd-rbac-cm configmap에서 관리합니다
-
+-   argocd 계정의 권한은 policy.csv파일로 관리하며, policy.csv는 argocd-rbac-cm configmap에서 관리합니다
+    
 -   `argocd-rbac-cm.yaml` 을 수정한다.
     -   data 하위에 oscka 계정의 role 을 admin 으로 지정
     -   `g, oscka, role:admin`
         -   Role definitions and bindings are in the form:
             `g, subject, inherited-subject`
-
  
 
 운영 환경에서는 사용자에 특정 ROLE 을 지정해야하지만, 테스트 단계이므로 본문에서는 admin ROLE 을 부여합니다.
 
 #### user password 생성 {#BackStage-3.Plugin-userpassword생성}
-
- 
-``` 
+```shell
 # -- Get full users list
 ➜  argocd account list
 NAME   ENABLED  CAPABILITIES
@@ -463,7 +451,7 @@ Password updated
 #### argocd token 발급 {#BackStage-3.Plugin-argocdtoken발급}
 
  
-``` 
+```shell
 # -- Generate auth token
 # if flag --account is omitted then Argo CD generates token for current user
 ➜ argocd account generate-token --account oscka
@@ -480,7 +468,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJvc2NrYTphcGl
 
  
  
-``` 
+```shell
 # -- Get specific user details
 ➜  argocd account get --account oscka
 Name:               oscka
@@ -500,7 +488,7 @@ Capabiliteis 에 apiKey 가 있고, Token 이 발급되어 있는것을 확인�
 ### setting {#BackStage-3.Plugin-setting.3}
 
 -   app-config.yaml
-``` 
+```yaml
 proxy:
   endpoints:
     '/argocd/api':
@@ -516,7 +504,7 @@ proxy:
 
 
 -   catalog-info.yaml
-``` 
+```yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -560,13 +548,13 @@ metadata:
 
 -   Install the plugin dependency in your Backstage app package
 
-``` 
+```shell
 # From your Backstage root directory
 yarn add --cwd packages/app @backstage/plugin-github-actions
 ```
 
 -   app-config.yaml
-``` 
+```yaml
 # vi app-config.yaml
 integrations:
   github:
@@ -584,7 +572,7 @@ auth:
 ```
 
 -   catalog-info.yaml
-``` 
+```yaml
 # vi catalog-info.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -603,7 +591,7 @@ metadata:
 
 ## start.ps1 (window PowerShell) {#BackStage-3.Plugin-start.ps1(windowPowerShell)}
  
-``` 
+```powershell
 # vi start.ps1
 Write-Host "Setting environment variables...";
 
@@ -634,7 +622,7 @@ Write-Host "Initializing process..."
  
 
 ## environment.sh (mac, linux) {#BackStage-3.Plugin-environment.sh(mac,linux)}
-``` 
+```shell
 # vi environment.sh
 export POSTGRES_HOST="localhost"
 export POSTGRES_PORT="5432"

@@ -98,7 +98,7 @@ Token 을 이용하여 연동했습니다.
 #### ClusterRoleBinding 생성 {#Backstage-4.Kubernetes-ClusterRoleBinding생성}
  
  
-``` 
+```shell
 kubectl create clusterrolebinding default-cluster-admin --clusterrole cluster-admin --serviceaccount default:default
 # clusterrolebinding.rbac.authorization.k8s.io/default-cluster-admin created
 ```
@@ -116,7 +116,7 @@ kubectl create clusterrolebinding default-cluster-admin --clusterrole cluster-ad
 
  
  
-``` 
+```shell
 kubectl -n <NAMESPACE> get secret $(kubectl -n <NAMESPACE> get sa <SERVICE_ACCOUNT_NAME> -o=json \
 | jq -r '.secrets[0].name') -o=json \
 | jq -r '.data["token"]' \
@@ -127,7 +127,7 @@ kubectl -n <NAMESPACE> get secret $(kubectl -n <NAMESPACE> get sa <SERVICE_ACCOU
 [**kubernetes 1.24 이상**](https://kubernetes.io/docs/concepts/configuration/secret/#service-account-token-secrets)은 아래 방식으로 service account token 을 생성해야합니다.
 
  
-``` 
+```shell 
 kubectl apply -f - <<EOF
 apiVersion: v1
 kind: Secret
@@ -141,7 +141,7 @@ EOF
 ```
 
  
-``` 
+```shell
 kubectl -n <NAMESPACE> get secret <SECRET_NAME> -o go-template='{{.data.token | base64decode}}'
 ```
 
@@ -149,7 +149,7 @@ kubectl -n <NAMESPACE> get secret <SECRET_NAME> -o go-template='{{.data.token | 
 ### Example deployment.yaml {#Backstage-4.Kubernetes-Exampledeployment.yaml}
  
  
-``` 
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -197,7 +197,7 @@ spec:
 
 ## app-config.yaml {#Backstage-4.Kubernetes-app-config.yaml}
 
-``` 
+```yaml
 kubernetes:
   serviceLocatorMethod:
     type: multiTenant
@@ -215,7 +215,7 @@ kubernetes:
 
 -   `K8S_MINIKUBE_URL` : kubernetes api server url 입력
 
-``` 
+```shell
 $ kubectl cluster-info
 Kubernetes control plane is running at https://127.0.0.1:53071
 CoreDNS is running at https://127.0.0.1:53071/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
@@ -226,7 +226,7 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 -   `K8S_MINIKUBE_TOKEN` : 위에서 조회한 ServiceAccount Token 입력
 
 ## catalog-info.yaml {#Backstage-4.Kubernetes-catalog-info.yaml}
-``` 
+```yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:

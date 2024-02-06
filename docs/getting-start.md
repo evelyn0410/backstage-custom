@@ -67,7 +67,7 @@ Backstage 의 Frontend 는 [**React**](https://react.dev)
 
 ## app 생성 {#Backstage-1.GettingStart-app생성}
 
-``` 
+```shell
 PS C:\_DEV> npx @backstage/create-app@latest
 
 ? Enter a name for the app [required] backstage-seul
@@ -88,7 +88,7 @@ Creating the app...
 
  
  
-``` 
+```shell
 # go to the application directory
 PS C:\_DEV> cd backstage-seul
 
@@ -113,7 +113,7 @@ PS C:\_DEV\backstage-seul> yarn dev
 아래는 앱을 만든 후 생성되는 파일과 폴더의 단순화된 layout 입니다.
 
  
-``` 
+```shell
 app
 ├── app-config.yaml
 ├── catalog-info.yaml
@@ -150,7 +150,7 @@ app
 
 # 저장소를 PostgreSQL 로 변경 {#Backstage-1.GettingStart-저장소를PostgreSQL로변경}
 
-**참고 \|**
+**참고**
 [https://backstage.io/docs/getting-started/configuration](https://backstage.io/docs/getting-started/configuration)
 
 기본적으로 SQLite 를 통해 저장하고 있는데, Backstage App 이 Restart 될
@@ -158,8 +158,7 @@ app
 
 따라서 저장소를 Postgers 로 변경해줍니다.
 
--   postgres-docker-compose.yaml
-``` 
+```yaml
 # postgres-docker-compose.yaml
 version: '3.1'
 services:
@@ -178,7 +177,7 @@ services:
 
 ### postgres package 추가 {#Backstage-1.GettingStart-postgrespackage추가}
  
-``` 
+```shell
  # From your Backstage root directory
  yarn add --cwd packages/backend pg
 ```
@@ -187,7 +186,7 @@ services:
 
  
  
-``` 
+```yaml
 backend:
   database:
     # config options: https://node-postgres.com/apis/client
@@ -206,7 +205,7 @@ postgres 로 변경후 database 목록을 확인해보면 아래 4개의 databas
 
  
  
-``` 
+```shell
 List of databases
             Name             |  Owner   | Encoding |  Collate   |   Ctype    | ICU Locale | Locale Provider | Access privileges 
 -----------------------------+----------+----------+------------+------------+------------+-----------------+-------------------
@@ -228,7 +227,7 @@ public 으로 소스코드를 커밋할 경우 노출하고싶지 않은 정보�
 
  
  
-``` 
+```powershell
 # vi start.ps1
 Write-Host "Setting environment variables...";
 
@@ -243,10 +242,7 @@ Write-Host "Initializing process..."
 
 
 -   mac, linux 일경우 environment.sh
-
- 
- 
-``` 
+```shell
 # vi environment.sh
 export POSTGRES_HOST=localhost
 export POSTGRES_PORT=5432

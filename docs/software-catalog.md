@@ -106,7 +106,7 @@ Enterprise, GitLab, \...)에 저장된 [메타데이터 YAML
 
 ## GitHub 연동 설정 (GitHub Integration) {#Backstage-2.Catalog-GitHub연동설정(GitHubIntegration)}
 
-**참고 \|**
+**참고**
 [https://backstage.io/docs/integrations/github/locations](https://backstage.io/docs/integrations/github/locations)
 
 카탈로그는 source control 에서 관리되므로 카탈로그 생성전 source control
@@ -131,7 +131,7 @@ Personal Access Token 을 발급받은 후 연동했습니다.
 
  
  
-``` 
+```yaml
 # vi app-config.yaml
 integrations:
   github:
@@ -196,7 +196,7 @@ Components 를 수동으로 등록하는 것 외에도 정적 구성 ([[static c
 예를 들어, 위의 예는 다음 구성을 사용하여 추가할 수 있습니다:
  
  
-``` 
+```yaml
 # vi app-config.yaml
 catalog:
   locations:
@@ -207,12 +207,12 @@ catalog:
 
 # Catalog - Component {#Backstage-2.Catalog-Catalog-Component}
 
-**참고 \|** [Descriptor Format of Catalog
+**참고** [Descriptor Format of Catalog
 Entities](https://backstage.io/docs/features/software-catalog/descriptor-format)
 
 ## catalog-info.yaml {#Backstage-2.Catalog-catalog-info.yaml}
 
-``` 
+```yaml
 # vi catalog-info.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -295,7 +295,7 @@ spec:
 
 ## app-config.yaml {#Backstage-2.Catalog-app-config.yaml}
 
-``` 
+```yaml
 catalog:
   import:
     entityFilename: catalog-info.yaml
@@ -329,13 +329,13 @@ catalog:
         -   **file :** 파일 위치는 백엔드 프로세스내에 있어야합니다.
             `` `packages/backend` ``
             -    
-                ``` 
+                ```yaml
                     - type: file
                       target: ../../catalog-entities/all.yaml
                 ```
 ## yaml file example {#Backstage-2.Catalog-yamlfileexample}
 
-``` 
+```yaml
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
 apiVersion: backstage.io/v1alpha1
@@ -388,7 +388,7 @@ Group 은 팀, 사업부 또는 관심사 그룹에 속한 사람들의 느슨�
     -   [https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/groups/team-devops.yaml](https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/groups/team-devops.yaml)
 
  
-``` 
+```yaml
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
@@ -470,7 +470,7 @@ System 은 하나 또는 여러 개의 API를 노출하거나 사용할 수 있�
     -   [https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/systems/openmsa.yaml](https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/systems/openmsa.yaml)
  
  
-``` 
+```yaml
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -497,7 +497,7 @@ spec:
 # env {#Backstage-2.Catalog-env}
 
 ## start.ps1 (window) {#Backstage-2.Catalog-start.ps1(window)}
-``` 
+```powershell
 # vi start.ps1
 Write-Host "Setting environment variables...";
 $env:POSTGRES_HOST="localhost";
@@ -512,7 +512,7 @@ Write-Host "Initializing process..."
 
 ## environment.sh (mac, linux) {#Backstage-2.Catalog-environment.sh(mac,linux)}
  
-``` 
+```shell
 # vi environment.sh
 export POSTGRES_HOST="localhost"
 export POSTGRES_PORT="5432"

@@ -24,7 +24,7 @@ backend:
     client: better-sqlite3
     connection: ':memory:'
   # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
-  workingDirectory: /Temp
+  # workingDirectory: /Temp
 
 kubernetes:
   serviceLocatorMethod:
@@ -32,27 +32,27 @@ kubernetes:
   clusterLocatorMethods:
     - type: config
       clusters:
-        - url: ${K8S_MINIKUBE_URL} # minikube
-          name: minikube
-          authProvider: serviceAccount
-          skipTLSVerify: true
-          skipMetricsLookup: false
-          serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
-
-        - url: ${K8S_KIND_URL}  # kind
-          name: kind-kind
-          authProvider: serviceAccount
-          skipTLSVerify: true
-          skipMetricsLookup: true
-          serviceAccountToken: ${K8S_KIND_TOKEN}
-
-        - url: ${K8S_K3S_URL}   # k3s
+        # k3s
+        - url: ${K8S_K3S_URL}   
           name: k3s
           authProvider: serviceAccount
           skipTLSVerify: true
           skipMetricsLookup: false
           serviceAccountToken: ${K8S_K3S_TOKEN}
-          
+        # minikube
+        - url: ${K8S_MINIKUBE_URL} 
+          name: minikube
+          authProvider: serviceAccount
+          skipTLSVerify: true
+          skipMetricsLookup: false
+          serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
+        # kind
+        - url: ${K8S_KIND_URL}  
+          name: kind-kind
+          authProvider: serviceAccount
+          skipTLSVerify: true
+          skipMetricsLookup: true
+          serviceAccountToken: ${K8S_KIND_TOKEN}
 catalog:
   import:
     entityFilename: catalog-info.yaml
