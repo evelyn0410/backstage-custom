@@ -14,6 +14,14 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     apt-get update && \
     apt-get install -y --no-install-recommends libsqlite3-dev
 
+#  ---- for techdocs
+RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
+ENV VIRTUAL_ENV=/opt/venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+RUN pip3 install mkdocs-techdocs-core
+#  ---- for techdocs
+
 # From here on we use the least-privileged `node` user to run the backend.
 USER node
 
@@ -23,14 +31,6 @@ USER node
 # If this occurs, then ensure BuildKit is enabled (`DOCKER_BUILDKIT=1`)
 # so the app dir is correctly created as `node`.
 WORKDIR /app
-
-#  ---- for techdocs
-RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
-ENV VIRTUAL_ENV=/opt/venv
-RUN python3 -m venv $VIRTUAL_ENV
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-RUN pip3 install mkdocs-techdocs-core
-#  ---- for techdocs
 
 # This switches many Node.js dependencies to production mode.
 ENV NODE_ENV production

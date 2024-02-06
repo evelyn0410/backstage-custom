@@ -148,6 +148,36 @@ app
 -   **packages/backend/**
     -   Backstage backend
 
+
+```shell
+warning Error running install script for optional dependency: "C:\\_git_evelyn\\backstage-custom\\node_modules\\tree-sitter-yaml: Command failed.
+Exit code: 1
+Command: node-gyp rebuild
+Arguments:
+Directory: C:\\_git_evelyn\\backstage-custom\\node_modules\\tree-sitter-yaml
+Output:
+gyp info it worked if it ends with ok
+gyp info using node-gyp@9.4.1
+gyp info using node@18.19.0 | win32 | x64
+
+
+gyp ERR! find Python
+gyp ERR! find Python **********************************************************
+gyp ERR! find Python You need to install the latest version of Python.
+gyp ERR! find Python Node-gyp should be able to find and use Python. If not,
+gyp ERR! find Python you can try one of the following options:
+gyp ERR! find Python - Use the switch --python=\"C:\\Path\\To\\python.exe\"
+gyp ERR! find Python   (accepted by both node-gyp and npm)
+gyp ERR! find Python - Set the environment variable PYTHON
+gyp ERR! find Python - Set the npm configuration variable python:
+gyp ERR! find Python   npm config set python \"C:\\Path\\To\\python.exe\"
+gyp ERR! find Python For more information consult the documentation at:
+gyp ERR! find Python https://github.com/nodejs/node-gyp#installation
+gyp ERR! find Python **********************************************************
+gyp ERR! find Python
+```
+
+
 # 저장소를 PostgreSQL 로 변경 {#Backstage-1.GettingStart-저장소를PostgreSQL로변경}
 
 **참고**
