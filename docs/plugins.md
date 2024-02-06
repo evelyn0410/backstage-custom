@@ -4,8 +4,6 @@ title: Plugins
 description: Documentation on Introduction to Plugins
 ---
 
-Created by [ 박진슬] on 2024 1월 29
- 
 - [개요 {#BackStage-3.Plugin-개요}](#개요-backstage-3plugin-개요)
 - [TODO Plugin {#BackStage-3.Plugin-TODOPlugin}](#todo-plugin-backstage-3plugin-todoplugin)
     - [TODO 주석 {#BackStage-3.Plugin-TODO주석}](#todo-주석-backstage-3plugin-todo주석)
@@ -96,14 +94,13 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 
 ![](assets/973373654/973373808.png?width=760)
 
-Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog \> TODO 탭에서
-확인할 수 있으며, File 을 클릭하면 Github 에 커밋된 파일로 이동할수
-있습니다.
+Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog > TODO 탭에서
+확인할 수 있으며, File 을 클릭하면 Github 에 커밋된 파일로 이동할수 있습니다.
+
 
 # Jenkins Plugin {#BackStage-3.Plugin-JenkinsPlugin}
 
 -   **참고**
-
     -   [Jenkins Plugin (Frontend)](https://github.com/backstage/backstage/tree/master/plugins/jenkins)
     -   [Jenkins Plugin (BackEnd)](https://github.com/backstage/backstage/tree/master/plugins/jenkins-backend)
         
@@ -162,13 +159,10 @@ jenkins:
 위에서 발급받은 Jenkins API Token 을 `JENKINS_TOKEN` env 를 생성하면됩니다.
 
 -   `departmentFoo:`부분을 생략하면 기본 인스턴스로 간주됩니다.
-
-    -   User 마다 Jenkins API Token 을 다르게 사용하도록 구분할경우
-        instances 하위에 배열형태로 추가하면 됩니다.
-
--   catalog-info.yaml
+    -   User 마다 Jenkins API Token 을 다르게 사용하도록 구분할경우 instances 하위에 배열형태로 추가하면 됩니다.
 
 ```yaml
+# catalog-info.yaml
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -279,9 +273,7 @@ SonarQube Plugin 은 SonarQube 에서 제공하는 ([SonarQube
 ### SonarQube 접속 정보 {#BackStage-3.Plugin-SonarQube접속정보}
 
 -   [http://192.168.41.50:9000/projects](http://192.168.41.50:9000/projects)
-
 -   admin
-
 -   osckorea!
 
 ### Code Quality 확인 {#BackStage-3.Plugin-CodeQuality확인}
@@ -343,19 +335,14 @@ Backstage 카탈로그에 Application 의 현재 상태를 표시할 수 있습�
 
 -   Repo Url
 -   Repo Path
-
 -   Destination Server
-
 -   Destination Namespace
-
 -   Sync Status
-
 -   Images
 
 ![image-20240111-020629.png](assets/973373654/973373745.png?width=760)
 
-Application 의 history 를 조회할 수 있고, history revision Limit 설정도
-가능하다.
+Application 의 history 를 조회할 수 있고, history revision Limit 설정도 가능하다.
 
 ### ArgoCD - User, RBAC, Token {#BackStage-3.Plugin-ArgoCD-User,RBAC,Token}
 
@@ -375,7 +362,7 @@ admin 계정은 token 발급이 불가능하므로 별도의 계정을 생성하
 
 API access 에 관리자를 사용하는 것은 전혀 권장되지 않으며, 기본적으로
 admin 사용자에게 apiKey 기능이 없는 이유라는 점을 명심하세요.
-[[#6687(댓글)]{.underline}](https://github.com/argoproj/argo-cd/issues/6687#issuecomment-878887020)
+[[#6687(댓글)]](https://github.com/argoproj/argo-cd/issues/6687#issuecomment-878887020)
 
 
 #### argocd user 생성 {#BackStage-3.Plugin-argocduser생성}
@@ -533,7 +520,7 @@ metadata:
 ![github-action-1.png](assets/973373654/973373736.png?width=760)
 ![image-20240111-043530.png](assets/973373654/973373733.png?width=760)
 
-1.  **[Organizations \> Setting]{.underline}** [**[OAuth App]{.underline}**](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) **[생성]{.underline}**
+1.  **[Organizations > Setting]** [**[OAuth App]**](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) **[생성]**
 
     1.  callback URL :
         `http://localhost:7007/api/auth/github/handler/frame`

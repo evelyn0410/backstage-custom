@@ -82,3 +82,46 @@ gyp ERR! node -v v18.19.0
 gyp ERR! node-gyp -v v10.0.1
 gyp ERR! not ok
 ```
+
+
+```shell
+warning Error running install script for optional dependency: "C:\\_git_evelyn\\backstage-custom\\node_modules\\tree-sitter-yaml: Command failed.
+Exit code: 1
+Command: node-gyp rebuild
+Arguments:
+Directory: C:\\_git_evelyn\\backstage-custom\\node_modules\\tree-sitter-yaml
+Output:
+gyp info it worked if it ends with ok
+gyp info using node-gyp@9.4.1
+gyp info using node@18.19.0 | win32 | x64
+
+
+gyp ERR! find Python
+gyp ERR! find Python **********************************************************
+gyp ERR! find Python You need to install the latest version of Python.
+gyp ERR! find Python Node-gyp should be able to find and use Python. If not,
+gyp ERR! find Python you can try one of the following options:
+gyp ERR! find Python - Use the switch --python=\"C:\\Path\\To\\python.exe\"
+gyp ERR! find Python   (accepted by both node-gyp and npm)
+gyp ERR! find Python - Set the environment variable PYTHON
+gyp ERR! find Python - Set the npm configuration variable python:
+gyp ERR! find Python   npm config set python \"C:\\Path\\To\\python.exe\"
+gyp ERR! find Python For more information consult the documentation at:
+gyp ERR! find Python https://github.com/nodejs/node-gyp#installation
+gyp ERR! find Python **********************************************************
+gyp ERR! find Python
+```
+
+3. 초기 yarn install error
+네트워크 환경이 원활하지않는 동시에 대량의 패키지를 다운받을경우 아래 에러가 발생합니다.
+```sh
+there appears to be trouble with your network connection. retrying
+An unexpected error occurred: "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.12.tgz: ESOCKETTIMEDOUT".
+```
+네트워크가 느리거나 해당 패키지 파일이 너무 큰 경우 강제로 타임아웃되는 시간을 늘리는 방법이다.
+```sh
+yarn install --network-timeout 10000000
+```
+실제로 package.json의 의존성 설치는 위의 방법으로 해결하였다.
+
+[참고](https://velog.io/@kmp1007s/yarn%EC%9C%BC%EB%A1%9C-expo-cli-%EC%84%A4%EC%B9%98-%EC%8B%9C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0)

@@ -39,20 +39,24 @@ kubernetes:
           skipTLSVerify: true
           skipMetricsLookup: false
           serviceAccountToken: ${K8S_K3S_TOKEN}
+        
         # minikube
-        - url: ${K8S_MINIKUBE_URL} 
-          name: minikube
-          authProvider: serviceAccount
-          skipTLSVerify: true
-          skipMetricsLookup: false
-          serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
+        # - url: ${K8S_MINIKUBE_URL} 
+        #   name: minikube
+        #   authProvider: serviceAccount
+        #   skipTLSVerify: true
+        #   skipMetricsLookup: false
+        #   serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
+        
         # kind
-        - url: ${K8S_KIND_URL}  
-          name: kind-kind
-          authProvider: serviceAccount
-          skipTLSVerify: true
-          skipMetricsLookup: true
-          serviceAccountToken: ${K8S_KIND_TOKEN}
+        # - url: ${K8S_KIND_URL}  
+        #   name: kind-kind
+        #   authProvider: serviceAccount
+        #   skipTLSVerify: true
+        #   skipMetricsLookup: true
+        #   serviceAccountToken: ${K8S_KIND_TOKEN}
+
+
 catalog:
   import:
     entityFilename: catalog-info.yaml
@@ -97,8 +101,6 @@ catalog:
   #       url: ${K8S_K3S_URL}
   #       serviceAccountToken: ${K8S_K3S_TOKEN}
   #       skipTLSVerify: true
-
-
 
 integrations:
   github:
@@ -149,8 +151,8 @@ techdocs:
   builder: 'local' # Alternatives - 'external'
   #builder: 'external' # Alternatives - 'external'
   generator:
-    #runIn: 'docker' # Alternatives - 'local'
-    runIn: 'local' # Alternatives - 'local'
+    runIn: 'docker' # Alternatives - 'local'
+    #runIn: 'local' # Alternatives - 'local'
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 

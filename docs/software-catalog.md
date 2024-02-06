@@ -6,8 +6,6 @@ sidebar_label: Overview
 description: The Backstage Software Catalog
 ---
 
-Created by [ 박진슬] on 2024 1월 29
-
 - [개요 {#Backstage-2.Catalog-개요}](#개요-backstage-2catalog-개요)
   - [What is a Software Catalog? {#Backstage-2.Catalog-WhatisaSoftwareCatalog?}](#what-is-a-software-catalog-backstage-2catalog-whatisasoftwarecatalog)
   - [Catalog 가 가져오는 효과 {#Backstage-2.Catalog-Catalog가가져오는효과}](#catalog-가-가져오는-효과-backstage-2catalog-catalog가가져오는효과)
@@ -47,12 +45,10 @@ Created by [ 박진슬] on 2024 1월 29
 
 ![](assets/973373541/973373619.png)
 
-Backstage 의 Software Catalog (이하 카탈로그)는 ecosystem 의 모든
-소프트웨어(services, websites, libraries, data pipelines, etc)의
+Backstage 의 Software Catalog (이하 카탈로그)는 ecosystem 의 모든 소프트웨어(services, websites, libraries, data pipelines, etc)의
 소유권과 메타데이터를 추적하는 중앙 집중식 시스템입니다.
 
-카탈로그는 코드와 함께 저장된 [메타데이터 YAML](https://backstage.io/docs/features/software-catalog/descriptor-format) 파일 의 개념을 중심으로 구축되며,이 파일은 Backstage
-에서 수집되고 시각화됩니다.
+카탈로그는 코드와 함께 저장된 [메타데이터 YAML](https://backstage.io/docs/features/software-catalog/descriptor-format) 파일 의 개념을 중심으로 구축되며,이 파일은 Backstage 에서 수집되고 시각화됩니다.
 
 ## Catalog 가 가져오는 효과 {#Backstage-2.Catalog-Catalog가가져오는효과}
 
@@ -71,46 +67,39 @@ Catalog 는 두 가지 주요 사용 사례를 지원합니다
 
 ![bsc-search-51a9aa0cdb9eb883d2bcf2451bc81362.png](assets/973373541/973373595.png?width=760)
 
-기본적으로 catalog 에는 로그인한 사용자의 팀이 소유한 components 가
-표시됩니다.
+기본적으로 catalog 에는 로그인한 사용자의 팀이 소유한 components 가 표시됩니다.
 
-하지만 전체 조회로 전환하여 회사의 소프트웨어 에코시스템에 있는 모든
-components 를 볼 수도 있습니다.
+하지만 전체 조회로 전환하여 회사의 소프트웨어 에코시스템에 있는 모든 components 를 볼 수도 있습니다.
 
-기본 인라인 검색 및 열 필터링을 사용하면 대규모 components 집합을 쉽게
-찾아볼 수 있습니다.
+기본 인라인 검색 및 열 필터링을 사용하면 대규모 components 집합을 쉽게 찾아볼 수 있습니다.
 
 ## Starring components {#Backstage-2.Catalog-Starringcomponents}
 
 ![bsc-starred-7c2f867de967e254b190aac28e55bd0b.png](assets/973373541/973373598.png?width=760)
 
-자주 방문하는 컴포넌트에 쉽고 빠르게 액세스할 수 있도록 백스테이지에서는
-컴포넌트 별표 기능을 지원합니다:
+자주 방문하는 컴포넌트에 쉽고 빠르게 액세스할 수 있도록 백스테이지에서는 컴포넌트 별표 기능을 지원합니다
 
 ## Plugins 을 통한 통합 도구 {#Backstage-2.Catalog-Plugins을통한통합도구}
 
 ![image-20240117-010527.png](assets/973373541/973373601.png?width=760)
 
--   소프트웨어 카탈로그는 소프트웨어를 관리하는 데 사용하는 인프라
-    도구를 체계적으로 정리할 수 있는 좋은 방법입니다.
+-   소프트웨어 카탈로그는 소프트웨어를 관리하는 데 사용하는 인프라 도구를 체계적으로 정리할 수 있는 좋은 방법입니다.
 
--   팀에게 서로 다른 인프라 UI 사이를 이동하도록 요청하는 대신 (컨텍스트
-    전환을 할 때마다 추가적인 인지 오버헤드가 발생함), 대부분의 도구를
-    카탈로그의 엔티티를 중심으로 구성할 수 있습니다.
+-   팀에게 서로 다른 인프라 UI 사이를 이동하도록 요청하는 대신 (컨텍스트 전환을 할 때마다 추가적인 인지 오버헤드가 발생함),
+    대부분의 도구를 카탈로그의 엔티티를 중심으로 구성할 수 있습니다.
+    
 
 # Catalog 에 components 추가 {#Backstage-2.Catalog-Catalog에components추가}
 
-카탈로그의 구성 요소에 대한 진실의 출처는 Source Control (GitHub, GitHub
-Enterprise, GitLab, \...)에 저장된 [메타데이터 YAML
-파일](https://backstage.io/docs/features/software-catalog/descriptor-format) 입니다.
+카탈로그의 구성 요소에 대한 진실의 출처는 Source Control (GitHub, GitHub Enterprise, GitLab, ...)에 저장된 [메타데이터 YAML 파일](https://backstage.io/docs/features/software-catalog/descriptor-format) 입니다.
+
 
 ## GitHub 연동 설정 (GitHub Integration) {#Backstage-2.Catalog-GitHub연동설정(GitHubIntegration)}
 
 **참고**
 [https://backstage.io/docs/integrations/github/locations](https://backstage.io/docs/integrations/github/locations)
 
-카탈로그는 source control 에서 관리되므로 카탈로그 생성전 source control
-과 연동이 필요하며, 본문에서는 GitHub 연동 방법을 설명합니다.
+카탈로그는 source control 에서 관리되므로 카탈로그 생성전 source control 과 연동이 필요하며, 본문에서는 GitHub 연동 방법을 설명합니다.
 
 -   Entities 는 정적 카탈로그 구성에 추가하거나, catalog-import plugin
     에 등록하거나, GitHub 조직(organization) 에서 발견할 수 있습니다.
@@ -143,11 +132,9 @@ integrations:
 
 **그외 연동 설정**
 
--   [사용 가능한 기타 통합
-    기능](https://backstage.io/docs/integrations/)
-
--   [Personal Access Token 대신 GitHub Apps
-    사용](https://backstage.io/docs/integrations/github/github-apps/#docsNav)
+-   [사용 가능한 기타 통합 기능](https://backstage.io/docs/integrations/)
+-   [Personal Access Token 대신 GitHub Apps 사용](https://backstage.io/docs/integrations/github/github-apps/#docsNav)
+    
 
 **카탈로그 생성 방법은 3가지가 있습니다.**
 
@@ -155,8 +142,7 @@ integrations:
 
 2.  Backstage를 통해 새로운 Components 생성
 
-3.  [외부 소스와
-    통합](https://backstage.io/docs/features/software-catalog/external-integrations/)
+3.  [외부 소스와 통합](https://backstage.io/docs/features/software-catalog/external-integrations/)
 
 ## 1. Components 수동 등록 {#Backstage-2.Catalog-1.Components수동등록}
 
@@ -164,8 +150,8 @@ integrations:
 
 ![](assets/973373541/973373616.png?width=763)
 
-사용자는 `/create`로 이동하여 **REGISTER EXISTING COMPONENT** 버튼을
-클릭하여 새 컴포넌트를 등록할 수 있습니다.
+사용자는 `/create`로 이동하여 **REGISTER EXISTING COMPONENT** 버튼을 클릭하여 새 컴포넌트를 등록할 수 있습니다.
+
 
 ### 1-2. YAML의 전체 URL 입력 {#Backstage-2.Catalog-1-2.YAML의전체URL입력}
 
@@ -188,12 +174,12 @@ integrations:
 
 ## 2. Backstage 를 통해 새로운 components 생성 {#Backstage-2.Catalog-2.Backstage를통해새로운components생성}
 
-[[Backstage Software Templates]{.underline}](https://backstage.io/docs/features/software-templates/) 을 통해 생성된 모든 소프트웨어는 카탈로그에 자동으로
-등록됩니다.
+[[Backstage Software Templates]{.underline}](https://backstage.io/docs/features/software-templates/) 을 통해 생성된 모든 소프트웨어는 카탈로그에 자동으로 등록됩니다.
+
 
 Components 를 수동으로 등록하는 것 외에도 정적 구성 ([[static configuration]{.underline}](https://backstage.io/docs/conf/)) 을 통해 컴포넌트를 등록할 수도 있습니다.
 
-예를 들어, 위의 예는 다음 구성을 사용하여 추가할 수 있습니다:
+예를 들어, 위의 예는 다음 구성을 사용하여 추가할 수 있습니다.
  
  
 ```yaml
@@ -207,8 +193,8 @@ catalog:
 
 # Catalog - Component {#Backstage-2.Catalog-Catalog-Component}
 
-**참고** [Descriptor Format of Catalog
-Entities](https://backstage.io/docs/features/software-catalog/descriptor-format)
+**참고** [Descriptor Format of Catalog Entities](https://backstage.io/docs/features/software-catalog/descriptor-format)
+
 
 ## catalog-info.yaml {#Backstage-2.Catalog-catalog-info.yaml}
 
@@ -481,13 +467,13 @@ spec:
   owner: team-devops
 ```
 
--   **[\*\[required\]]** `apiVersion` , `kind`
+-   **[required]** `apiVersion` , `kind`
 
     -   `apiVersion` : `backstage.io/v1alpha1`
 
     -   `kind` : `System`
 
--   **[\*\[required\] ]**`spec.owner` : 시스템
+-   **[required]**`spec.owner` : 시스템
     소유자 (엔터티 참조)
 
 -   `spec.domain` : 시스템이 속한 도메인 (엔터티 참조)

@@ -4,9 +4,6 @@ title: Getting Start
 description: Documentation on How to get started with Backstage
 ---
 
-Created by [박진슬] on 2024 1월 29
-
-
 - [개요](#개요)
 - [Create Backstage App {#Backstage-1.GettingStart-CreateBackstageApp}](#create-backstage-app-backstage-1gettingstart-createbackstageapp)
   - [사전 설치 (Prerequisites) {#Backstage-1.GettingStart-사전설치(Prerequisites)}](#사전-설치-prerequisites-backstage-1gettingstart-사전설치prerequisites)
@@ -19,7 +16,6 @@ Created by [박진슬] on 2024 1월 29
     - [postgres package 추가 {#Backstage-1.GettingStart-postgrespackage추가}](#postgres-package-추가-backstage-1gettingstart-postgrespackage추가)
     - [app-config.yaml 수정 {#Backstage-1.GettingStart-app-config.yaml수정}](#app-configyaml-수정-backstage-1gettingstart-app-configyaml수정)
 - [env 관리 {#Backstage-1.GettingStart-env관리}](#env-관리-backstage-1gettingstart-env관리)
-
 
 ------------------------------------------------------------------------
 
@@ -47,7 +43,6 @@ Backstage 의 Frontend 는 [**React**](https://react.dev)
 -   **node**
     -   install
         -   [https://jin2rang.tistory.com/entry/Window-Nodejs-%EC%84%A4%EC%B9%982](https://jin2rang.tistory.com/entry/Window-Nodejs-%EC%84%A4%EC%B9%982)
-            card-appearance="inline" 
 
     -   nvm 은 node.js 를 여러개의 버전으로 설치하고 관리할 수 있는 도구입니다.
         
@@ -85,8 +80,6 @@ Creating the app...
 
 
 ## app 시작 (Run the Backstage app) 
-
- 
  
 ```shell
 # go to the application directory
@@ -149,33 +142,6 @@ app
     -   Backstage backend
 
 
-```shell
-warning Error running install script for optional dependency: "C:\\_git_evelyn\\backstage-custom\\node_modules\\tree-sitter-yaml: Command failed.
-Exit code: 1
-Command: node-gyp rebuild
-Arguments:
-Directory: C:\\_git_evelyn\\backstage-custom\\node_modules\\tree-sitter-yaml
-Output:
-gyp info it worked if it ends with ok
-gyp info using node-gyp@9.4.1
-gyp info using node@18.19.0 | win32 | x64
-
-
-gyp ERR! find Python
-gyp ERR! find Python **********************************************************
-gyp ERR! find Python You need to install the latest version of Python.
-gyp ERR! find Python Node-gyp should be able to find and use Python. If not,
-gyp ERR! find Python you can try one of the following options:
-gyp ERR! find Python - Use the switch --python=\"C:\\Path\\To\\python.exe\"
-gyp ERR! find Python   (accepted by both node-gyp and npm)
-gyp ERR! find Python - Set the environment variable PYTHON
-gyp ERR! find Python - Set the npm configuration variable python:
-gyp ERR! find Python   npm config set python \"C:\\Path\\To\\python.exe\"
-gyp ERR! find Python For more information consult the documentation at:
-gyp ERR! find Python https://github.com/nodejs/node-gyp#installation
-gyp ERR! find Python **********************************************************
-gyp ERR! find Python
-```
 
 
 # 저장소를 PostgreSQL 로 변경 {#Backstage-1.GettingStart-저장소를PostgreSQL로변경}

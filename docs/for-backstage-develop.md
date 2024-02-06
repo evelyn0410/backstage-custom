@@ -6,14 +6,14 @@ description: for-backstage-develop
 
 
 - Backstage's Github
-간단하지만 시작하기에 아주 좋은 
 https://github.com/backstage/software-templates/tree/main/scaffolder-templates
 
 - Janus's Github
-다른 많은 흥미로운 것들 중에서도 템플릿을 공유하는 방법을 보여줌
+템플릿을 공유하는 방법 참고
 https://github.com/janus-idp
+
 - Roadie's Github
-템플릿 디버깅을 위한 몇 가지 팁을 찾을 수 있는 Roadie의 Github
+템플릿 디버깅을 위한 팁 참고
 https://github.com/RoadieHQ/software-templates/tree/main/scaffolder-templates
 https://roadie.io/docs/scaffolder/debug-template/
 
