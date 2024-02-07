@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
-  title: Consolidate Services
+  title: Argocd API
   description: Description of all APIs
-  version: version not set
+  version: v2.9.3+6eba5be
 servers:
   - url: /
 paths:
