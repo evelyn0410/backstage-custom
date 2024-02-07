@@ -88,20 +88,6 @@ catalog:
     # - type: file
     #   target: ../../catalog-entities/templates.yaml
 
-  # providers:
-  #   ocm:
-  #     default:
-  #       name: kind-kind
-  #       url: ${K8S_KIND_URL}
-  #       serviceAccountToken: ${K8S_KIND_TOKEN}
-  #       skipTLSVerify: true
-  #     env: # Key is reflected as provider ID. Defines and claims plugin instance ownership of entities
-  #       # kubernetesPluginRef: kind-kind # Match the cluster name in kubernetes plugin config
-  #       name: k3s
-  #       url: ${K8S_K3S_URL}
-  #       serviceAccountToken: ${K8S_K3S_TOKEN}
-  #       skipTLSVerify: true
-
 integrations:
   github:
     - host: github.com

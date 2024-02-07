@@ -14,10 +14,8 @@ metadata:
     backstage.io/managed-by-location: url:https://github.com/evelyn0410/backstage-custom/blob/main/catalog-info.yaml
     github.com/project-slug: evelyn0410/backstage-custom
     backstage.io/kubernetes-id: backstage
-    #nexus-repository-manager/docker.image-name: backstage
+    nexus-repository-manager/docker.image-name: backstage
     argocd/app-name: backstage
-    #jenkins.io/job-full-name: backstage-custom
-    #sonarqube.org/project-key: default/evelyn0410_backstage-custom
 spec:
   type: service
   system: openmsa-idp

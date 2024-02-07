@@ -6,7 +6,7 @@ metadata:
 spec:
   targets:
     - ./apis.yaml
-    - ./components.yaml
     - ./groups.yaml
     - ./systems.yaml
     - ./resources.yaml
+    #- ./components.yaml
