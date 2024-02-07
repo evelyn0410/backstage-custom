@@ -11,6 +11,10 @@ docs/index.md 작성
 2. mkdocs.yaml 생성
 
 프로젝트 ROOT 위치에 mkdocs.yaml 파일을 생성합니다.
+
+
+- mkdocs 작성 참고 : 
+  - https://github.com/backstage/backstage/blob/master/mkdocs.yml
 ```yaml
 # vi mkdocs.yaml
 site_name: starter-techdocs
@@ -35,7 +39,7 @@ plugins:
 
 4. app-config.yaml 작성
 참고 : https://backstage.io/docs/features/techdocs/configuration
-```
+```yaml
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 # Note: After experimenting with basic setup, use CI/CD to generate docs
 # and an external cloud storage when deploying TechDocs for production use-case.

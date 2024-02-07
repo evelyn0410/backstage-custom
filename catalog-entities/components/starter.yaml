@@ -2,30 +2,22 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: starter
-  title: starter
-  description: |
-    템플릿 프로젝트 - Starter
-  links:
-    - title: GitHub
-      url: https://github.com/evelyn0410/starter
+  description: starter for backstage
   annotations:
+    backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml
     backstage.io/kubernetes-id: starter
     backstage.io/techdocs-ref: dir:.
-    starter.backstage.io/techdocs-builder: local
-    #backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml
     github.com/project-slug: evelyn0410/starter
     jenkins.io/job-full-name: starter
     sonarqube.org/project-key: default/evelyn0410_starter
     nexus-repository-manager/docker.image-name: starter
     argocd/app-name: starter
+    
+  links:
+    - url: https://github.com/evelyn0410/starter
+      title: GitHub Repo
+      icon: github
 spec:
   type: service
-  system: openmsa-idp
+  lifecycle: experimental
   owner: team-develop
-  lifecycle: production
-  dependsOn:
-    - resource:argocd
-    - resource:nexus
-    - resource:keycloak
-    - resource:github
-    - resource:sonarqube

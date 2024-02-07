@@ -196,8 +196,7 @@ backend:
 
 
 
-postgres 로 변경후 database 목록을 확인해보면 아래 4개의 database 가
-생성된것을 확인해볼수 있습니다.
+postgres 로 변경후 database 목록을 확인해보면 아래 4개의 database 가 생성된 것을 확인해볼수 있습니다.
 
  
  
@@ -215,9 +214,7 @@ List of databases
 
 # env 관리 {#Backstage-1.GettingStart-env관리}
 
-env 를 운영환경 (dev,stg,prd) 마다 다르게 적용할 수도 있고, Github 에
-public 으로 소스코드를 커밋할 경우 노출하고싶지 않은 정보를 하나의
-파일에 작성후 .gitignore 에 등록하여 env 를 관리한다.
+env 를 운영환경 (dev,stg,prd) 마다 다르게 적용할 수도 있고, Github 에 public 으로 소스코드를 커밋할 경우 노출하고싶지 않은 정보를 하나의 파일에 작성후 .gitignore 에 등록하여 env 를 관리한다.
 
 -   window 일경우 start.ps1 (for powershell)
 

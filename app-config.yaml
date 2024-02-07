@@ -85,8 +85,6 @@ catalog:
     #   target: ../../catalog-entities/users.yaml
     #   rules:
     #     - allow: [User]
-    # - type: file
-    #   target: ../../catalog-entities/templates.yaml
 
 integrations:
   github:
@@ -130,8 +128,8 @@ proxy:
   #     changeOrigin: true
 
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
-# Note: After experimenting with basic setup, use CI/CD to generate docs
-# and an external cloud storage when deploying TechDocs for production use-case.
+# Note: After experimenting with basic setup, use CI/CD to generate docs and an external cloud storage when deploying TechDocs for production use-case.
+# 참고: 기본 설정을 실험해 본 후, 운영시 TechDocs를 배포할 때 CI/CD를 사용하여 문서와 외부 클라우드 저장소를 생성하세요.
 # https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
 techdocs:
   builder: 'local' # Alternatives - 'external'
