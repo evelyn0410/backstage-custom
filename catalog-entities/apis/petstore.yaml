@@ -8,13 +8,5 @@ spec:
   lifecycle: experimental
   owner: team-devops
   system: openmsa-idp
-  definition: |
-    syntax = "proto3";
-
-    service Exampler {
-      rpc Example (ExampleMessage) returns (ExampleMessage) {};
-    }
-
-    message ExampleMessage {
-      string example = 1;
-    };
+  definition:
+    $text: ./petstore.yaml

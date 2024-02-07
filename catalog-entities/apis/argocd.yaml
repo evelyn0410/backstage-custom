@@ -14,4 +14,4 @@ spec:
   owner: team-devops
   lifecycle: production
   definition:
-    $openapi: https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/apis/argocd-swagger.json
+    $text: https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/apis/argocd-swagger.json
