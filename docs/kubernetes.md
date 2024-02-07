@@ -179,6 +179,24 @@ spec:
 
     -   catalog-info.yaml 의 annotation 과 k8s resource 의 label 이 동일해야합니다.
         
+kustomization 을 사용할 경우 commonLabels 를 사용하면 kustomize 에서 k8s resource 에 backstage 라벨을 생성합니다.
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  backstage.io/kubernetes-id: backstage
+  
+resources:
+- deployment.yaml
+- service.yaml
+- ingress.yaml
+
+images:
+- name: jei0486/backstage-custom
+  newTag: latest
+```
+
 
 # Setting {#Backstage-4.Kubernetes-Setting}
 

@@ -46,15 +46,13 @@ plugins:
 # https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
 techdocs:
   builder: 'local' # Alternatives - 'external'
-  #builder: 'external' # Alternatives - 'external'
   generator:
-    runIn: 'docker' # Alternatives - 'local'
-    #runIn: 'local' # Alternatives - 'local'
+    runIn: 'docker' # Alternatives - 'docker'
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 ```
 
-
+![](assets/techdocs/techdocs-buildlog.png?width=760)
 
 
 ## Trouble Shoot

@@ -125,3 +125,55 @@ yarn install --network-timeout 10000000
 실제로 package.json의 의존성 설치는 위의 방법으로 해결하였다.
 
 [참고](https://velog.io/@kmp1007s/yarn%EC%9C%BC%EB%A1%9C-expo-cli-%EC%84%A4%EC%B9%98-%EC%8B%9C-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0)
+
+
+
+
+## docker-compose.yaml
+```yaml
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  backstage:
+    image: jei0486/backstage
+    restart: always
+    ports:
+      - 7007:7007
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - AUTH_GITHUB_CLIENT_ID=${AUTH_GITHUB_CLIENT_ID}
+      - AUTH_GITHUB_CLIENT_SECRET=${AUTH_GITHUB_CLIENT_SECRET}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - JENKINS_URL=${JENKINS_URL}
+      - JENKINS_TOKEN=${JENKINS_TOKEN}
+      - SONARQUBE_URL=${SONARQUBE_URL}
+      - SONARQUBE_TOKEN=${SONARQUBE_TOKEN}
+      - NEXUS_REPOSITORY_MANAGER_URL=${NEXUS_REPOSITORY_MANAGER_URL}
+      - NEXUS_REPOSITORY_MANAGER_AUTH=${NEXUS_REPOSITORY_MANAGER_AUTH}
+      - ARGOCD_URL=${ARGOCD_URL}
+      - ARGOCD_AUTH_TOKEN=${ARGOCD_AUTH_TOKEN}
+      - K8S_MINIKUBE_URL=${K8S_MINIKUBE_URL}
+      - K8S_MINIKUBE_TOKEN=${K8S_MINIKUBE_TOKEN}
+      - K8S_KIND_URL=${K8S_KIND_URL}
+      - K8S_KIND_TOKEN=${K8S_KIND_TOKEN}
+      - K8S_K3S_URL=${K8S_K3S_URL}
+      - K8S_K3S_TOKEN=${K8S_K3S_TOKEN}
+      - NODE_ENV=development
+
+```
