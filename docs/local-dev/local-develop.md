@@ -8,7 +8,7 @@ description: local-develop
 # power shell 에서 env 적용 및 확인
 ./start.ps1
 
-# backend, frontend 시작
+# backend, frontend 시작 커맨드
 yarn dev
 ```
 
@@ -130,6 +130,9 @@ yarn install --network-timeout 10000000
 
 
 ## docker-compose.yaml
+
+로컬환경에서 docker 로 띄울경우 아래 docker-compose.yaml 을 참고해주세요.
+
 ```yaml
 version: '3.1'
 services:

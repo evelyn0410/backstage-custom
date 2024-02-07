@@ -1,6 +1,6 @@
 ---
-id: getting-start
-title: Getting Start
+id: getting-started
+title: Getting Started
 description: Documentation on How to get started with Backstage
 ---
 
@@ -14,7 +14,7 @@ description: Documentation on How to get started with Backstage
 Kubernetes , Catalog 기능을 테스트 하기전에 BackStage App 을 만드는
 과정이 필요합니다.
 
-Backstage 의 Frontend 는 [**React**](https://react.dev) , Backend 는 [**Node.js**](https://nodejs.org/)  으로 개발돼있고 전부 [**Typescript**](https://www.typescriptlang.org/) 를 사용하고 있습니다.
+Backstage 의 Frontend 는 [**React**](https://react.dev) , Backend 는 [**Node.js**](https://nodejs.org/) 으로 개발돼있고 전부 [**Typescript**](https://www.typescriptlang.org/) 를 사용하고 있습니다.
 
  
 

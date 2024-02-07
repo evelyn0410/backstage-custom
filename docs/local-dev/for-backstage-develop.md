@@ -5,17 +5,12 @@ description: for-backstage-develop
 ---
 
 ## 참고
-- Backstage's Github
-https://github.com/backstage/software-templates/tree/main/scaffolder-templates
-
-- Janus's Github
-템플릿을 공유하는 방법 참고
-https://github.com/janus-idp
-
-- Roadie's Github
-템플릿 디버깅을 위한 팁 참고
-https://github.com/RoadieHQ/software-templates/tree/main/scaffolder-templates
-https://roadie.io/docs/scaffolder/debug-template/
+  - [Backstage's Github](https://github.com/backstage/software-templates/tree/main/scaffolder-templates)
+  - [Janus's Github](https://github.com/janus-idp)
+      - 템플릿을 공유하는 방법 참고
+  - [Roadie's Github](https://github.com/RoadieHQ/software-templates/tree/main/scaffolder-templates)
+      - 템플릿 디버깅을 위한 팁 참고
+      - https://roadie.io/docs/scaffolder/debug-template/
 
 ```yaml
 # app-config.yaml
@@ -47,8 +42,12 @@ spec:
     - https://github.com/evelyn0410/software-templates/blob/main/templates/github/nodejs-backend/template.yaml
     - https://github.com/evelyn0410/software-templates/blob/main/scaffolder-templates/springboot-grpc-template/template.yaml
 ```
+ 
  type: url 으로 지정할경우 github 의 url 을 참조하며, type: url 을 제거할경우 로컬 파일 경로를 참조합니다. 
+ 
  backstage 소스코드 위치를 기준으로 상대경로를 기재해줍니다.
+
+
 ```yaml
 # app-config.yaml
 catalog:
