@@ -4,21 +4,6 @@ title: Getting Start
 description: Documentation on How to get started with Backstage
 ---
 
-- [개요](#개요)
-- [Create Backstage App {#Backstage-1.GettingStart-CreateBackstageApp}](#create-backstage-app-backstage-1gettingstart-createbackstageapp)
-  - [사전 설치 (Prerequisites) {#Backstage-1.GettingStart-사전설치(Prerequisites)}](#사전-설치-prerequisites-backstage-1gettingstart-사전설치prerequisites)
-  - [app 생성 {#Backstage-1.GettingStart-app생성}](#app-생성-backstage-1gettingstart-app생성)
-  - [app 시작 (Run the Backstage app)](#app-시작-run-the-backstage-app)
-  - [브라우저에서 확인 {#Backstage-1.GettingStart-브라우저에서확인}](#브라우저에서-확인-backstage-1gettingstart-브라우저에서확인)
-  - [General folder structure {#Backstage-1.GettingStart-Generalfolderstructure}](#general-folder-structure-backstage-1gettingstart-generalfolderstructure)
-- [저장소를 PostgreSQL 로 변경 {#Backstage-1.GettingStart-저장소를PostgreSQL로변경}](#저장소를-postgresql-로-변경-backstage-1gettingstart-저장소를postgresql로변경)
-  - [setting](#setting)
-    - [postgres package 추가 {#Backstage-1.GettingStart-postgrespackage추가}](#postgres-package-추가-backstage-1gettingstart-postgrespackage추가)
-    - [app-config.yaml 수정 {#Backstage-1.GettingStart-app-config.yaml수정}](#app-configyaml-수정-backstage-1gettingstart-app-configyaml수정)
-- [env 관리 {#Backstage-1.GettingStart-env관리}](#env-관리-backstage-1gettingstart-env관리)
-
-------------------------------------------------------------------------
-
 # 개요
 
 **참고**
@@ -30,15 +15,16 @@ Kubernetes , Catalog 기능을 테스트 하기전에 BackStage App 을 만드�
 과정이 필요합니다.
 
 Backstage 의 Frontend 는 [**React**](https://react.dev)
- , Backend 는
-[**Node.js**](https://nodejs.org/)  으로
+
+ , Backend 는 [**Node.js**](https://nodejs.org/)  으로
+
 개발돼있고 전부 [**Typescript**](https://www.typescriptlang.org/) 를 사용하고 있습니다.
 
  
 
-# Create Backstage App {#Backstage-1.GettingStart-CreateBackstageApp}
+# Create Backstage App
 
-## 사전 설치 (Prerequisites) {#Backstage-1.GettingStart-사전설치(Prerequisites)}
+## 사전 설치 (Prerequisites)
 
 -   **node**
     -   install
@@ -60,7 +46,7 @@ Backstage 의 Frontend 는 [**React**](https://react.dev)
     -   [npm vs yarn](https://joshua1988.github.io/vue-camp/package-manager/npm-vs-yarn.html)
          : npm 과 yarn 의 차이점은 해당 URL 에서 확인할 수 있습니다.
 
-## app 생성 {#Backstage-1.GettingStart-app생성}
+## app 생성 
 
 ```shell
 PS C:\_DEV> npx @backstage/create-app@latest
@@ -93,7 +79,7 @@ PS C:\_DEV\backstage-seul> yarn dev
 
 `yarn dev` 명령은 프론트엔드와 백엔드를 동일한 창에서 별도의 프로세스(\[0\]과 \[1\]로 명명) 로 실행합니다.
 
-## 브라우저에서 확인 {#Backstage-1.GettingStart-브라우저에서확인}
+## 브라우저에서 확인  
 
 [http://localhost:3000](http://localhost:3000)
  으로 접속하면 아래와같은 Dashboard 를 확인할 수 있습니다.
@@ -101,7 +87,7 @@ PS C:\_DEV\backstage-seul> yarn dev
 
 ![](assets/973373498/973373530.png?width=760)
 
-## General folder structure {#Backstage-1.GettingStart-Generalfolderstructure}
+## General folder structure 
 
 아래는 앱을 만든 후 생성되는 파일과 폴더의 단순화된 layout 입니다.
 
@@ -144,7 +130,7 @@ app
 
 
 
-# 저장소를 PostgreSQL 로 변경 {#Backstage-1.GettingStart-저장소를PostgreSQL로변경}
+# 저장소를 PostgreSQL 로 변경   
 
 **참고**
 [https://backstage.io/docs/getting-started/configuration](https://backstage.io/docs/getting-started/configuration)
@@ -171,14 +157,14 @@ services:
 
 ## setting 
 
-### postgres package 추가 {#Backstage-1.GettingStart-postgrespackage추가}
+### postgres package 추가 
  
 ```shell
  # From your Backstage root directory
  yarn add --cwd packages/backend pg
 ```
 
-### app-config.yaml 수정 {#Backstage-1.GettingStart-app-config.yaml수정}
+### app-config.yaml 수정  
 
  
  
@@ -212,7 +198,7 @@ List of databases
 
 
 
-# env 관리 {#Backstage-1.GettingStart-env관리}
+# env 관리
 
 env 를 운영환경 (dev,stg,prd) 마다 다르게 적용할 수도 있고, Github 에 public 으로 소스코드를 커밋할 경우 노출하고싶지 않은 정보를 하나의 파일에 작성후 .gitignore 에 등록하여 env 를 관리한다.
 

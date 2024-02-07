@@ -15,6 +15,7 @@ docs/index.md 작성
 
 - mkdocs 작성 참고 : 
   - https://github.com/backstage/backstage/blob/master/mkdocs.yml
+  
 ```yaml
 # vi mkdocs.yaml
 site_name: starter-techdocs

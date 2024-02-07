@@ -4,54 +4,9 @@ title: Plugins
 description: Documentation on Introduction to Plugins
 ---
 
-- [개요 {#BackStage-3.Plugin-개요}](#개요-backstage-3plugin-개요)
-- [TODO Plugin {#BackStage-3.Plugin-TODOPlugin}](#todo-plugin-backstage-3plugin-todoplugin)
-    - [TODO 주석 {#BackStage-3.Plugin-TODO주석}](#todo-주석-backstage-3plugin-todo주석)
-    - [Backstage TODO tab {#BackStage-3.Plugin-BackstageTODOtab}](#backstage-todo-tab-backstage-3plugin-backstagetodotab)
-- [Jenkins Plugin {#BackStage-3.Plugin-JenkinsPlugin}](#jenkins-plugin-backstage-3plugin-jenkinsplugin)
-    - [Jenkins 접속 정보 {#BackStage-3.Plugin-Jenkins접속정보}](#jenkins-접속-정보-backstage-3plugin-jenkins접속정보)
-    - [Jenkins Build, Job Info 확인 {#BackStage-3.Plugin-JenkinsBuild,JobInfo확인}](#jenkins-build-job-info-확인-backstage-3plugin-jenkinsbuildjobinfo확인)
-      - [Latest Build {#BackStage-3.Plugin-LatestBuild}](#latest-build-backstage-3plugin-latestbuild)
-      - [Jenkins project list {#BackStage-3.Plugin-Jenkinsprojectlist}](#jenkins-project-list-backstage-3plugin-jenkinsprojectlist)
-      - [View summary of a build {#BackStage-3.Plugin-Viewsummaryofabuild}](#view-summary-of-a-build-backstage-3plugin-viewsummaryofabuild)
-      - [Jenkins job list {#BackStage-3.Plugin-Jenkinsjoblist}](#jenkins-job-list-backstage-3plugin-jenkinsjoblist)
-    - [Jenkins API Token 발급 {#BackStage-3.Plugin-JenkinsAPIToken발급}](#jenkins-api-token-발급-backstage-3plugin-jenkinsapitoken발급)
-    - [setting {#BackStage-3.Plugin-setting}](#setting-backstage-3plugin-setting)
-- [Nexus Repository Manager Plugin (**Image**) {#BackStage-3.Plugin-NexusRepositoryManagerPlugin(Image)}](#nexus-repository-manager-plugin-image-backstage-3plugin-nexusrepositorymanagerpluginimage)
-    - [Nexus 접속정보 {#BackStage-3.Plugin-Nexus접속정보}](#nexus-접속정보-backstage-3plugin-nexus접속정보)
-    - [build artifacts 조회 {#BackStage-3.Plugin-buildartifacts조회}](#build-artifacts-조회-backstage-3plugin-buildartifacts조회)
-    - [setting {#BackStage-3.Plugin-setting.1}](#setting-backstage-3plugin-setting1)
-- [SonarQube Plugin {#BackStage-3.Plugin-SonarQubePlugin}](#sonarqube-plugin-backstage-3plugin-sonarqubeplugin)
-    - [SonarQube 접속 정보 {#BackStage-3.Plugin-SonarQube접속정보}](#sonarqube-접속-정보-backstage-3plugin-sonarqube접속정보)
-    - [Code Quality 확인 {#BackStage-3.Plugin-CodeQuality확인}](#code-quality-확인-backstage-3plugin-codequality확인)
-    - [setting {#BackStage-3.Plugin-setting.2}](#setting-backstage-3plugin-setting2)
-- [Argo CD Plugin {#BackStage-3.Plugin-ArgoCDPlugin}](#argo-cd-plugin-backstage-3plugin-argocdplugin)
-    - [ArgoCD over view {#BackStage-3.Plugin-ArgoCDoverview}](#argocd-over-view-backstage-3plugin-argocdoverview)
-    - [ArgoCD - User, RBAC, Token {#BackStage-3.Plugin-ArgoCD-User,RBAC,Token}](#argocd---user-rbac-token-backstage-3plugin-argocd-userrbactoken)
-      - [argocd user 생성 {#BackStage-3.Plugin-argocduser생성}](#argocd-user-생성-backstage-3plugin-argocduser생성)
-      - [생성한 user role 수정 {#BackStage-3.Plugin-생성한userrole수정}](#생성한-user-role-수정-backstage-3plugin-생성한userrole수정)
-      - [user password 생성 {#BackStage-3.Plugin-userpassword생성}](#user-password-생성-backstage-3plugin-userpassword생성)
-      - [argocd token 발급 {#BackStage-3.Plugin-argocdtoken발급}](#argocd-token-발급-backstage-3plugin-argocdtoken발급)
-      - [argocd account 확인 {#BackStage-3.Plugin-argocdaccount확인}](#argocd-account-확인-backstage-3plugin-argocdaccount확인)
-    - [setting {#BackStage-3.Plugin-setting.3}](#setting-backstage-3plugin-setting3)
-- [GitHub Actions Plugin {#BackStage-3.Plugin-GitHubActionsPlugin}](#github-actions-plugin-backstage-3plugin-githubactionsplugin)
-    - [GitHub Actions 확인 {#BackStage-3.Plugin-GitHubActions확인}](#github-actions-확인-backstage-3plugin-githubactions확인)
-    - [**Provide OAuth credentials** {#BackStage-3.Plugin-ProvideOAuthcredentials}](#provide-oauth-credentials-backstage-3plugin-provideoauthcredentials)
-    - [Setting {#BackStage-3.Plugin-Setting}](#setting-backstage-3plugin-setting-1)
-- [env {#BackStage-3.Plugin-env}](#env-backstage-3plugin-env)
-  - [start.ps1 (window PowerShell) {#BackStage-3.Plugin-start.ps1(windowPowerShell)}](#startps1-window-powershell-backstage-3plugin-startps1windowpowershell)
-  - [environment.sh (mac, linux) {#BackStage-3.Plugin-environment.sh(mac,linux)}](#environmentsh-mac-linux-backstage-3plugin-environmentshmaclinux)
-- [추가 Plugins? {#BackStage-3.Plugin-추가Plugins?}](#추가-plugins-backstage-3plugin-추가plugins)
-    - [**Source Control Mgmt** {#BackStage-3.Plugin-SourceControlMgmt}](#source-control-mgmt-backstage-3plugin-sourcecontrolmgmt)
-    - [CI/CD {#BackStage-3.Plugin-CI/CD}](#cicd-backstage-3plugin-cicd)
-    - [**Agile Planning** {#BackStage-3.Plugin-AgilePlanning}](#agile-planning-backstage-3plugin-agileplanning)
-    - [Monitoring {#BackStage-3.Plugin-Monitoring}](#monitoring-backstage-3plugin-monitoring)
-    - [**Security** {#BackStage-3.Plugin-Security}](#security-backstage-3plugin-security)
 
 
-------------------------------------------------------------------------
-
-# 개요 {#BackStage-3.Plugin-개요}
+# 개요
 
 - **참고**
   - [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
@@ -72,14 +27,14 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 
 4.  **catalog-info.yaml** 에 annotation 추가
 
-# TODO Plugin {#BackStage-3.Plugin-TODOPlugin}
+# TODO Plugin 
 
 **참고**
 [https://github.com/backstage/backstage/tree/master/plugins/todo](https://github.com/backstage/backstage/tree/master/plugins/todo)
 
 소스 코드에서 TODO 주석을 찾아볼 수 있는 Backstage Plugin
 
-### TODO 주석 {#BackStage-3.Plugin-TODO주석}
+### TODO 주석 
 
 ![](assets/973373654/973373805.png?width=760)
 
@@ -90,7 +45,7 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 의미있는 작업을 더 해야 할 필요성을 느낄때 해당 사항에 대해 TODO
 주석으로 남겨놓습니다.
 
-### Backstage TODO tab {#BackStage-3.Plugin-BackstageTODOtab}
+### Backstage TODO tab 
 
 ![](assets/973373654/973373808.png?width=760)
 
@@ -98,7 +53,7 @@ Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog > TODO �
 확인할 수 있으며, File 을 클릭하면 Github 에 커밋된 파일로 이동할수 있습니다.
 
 
-# Jenkins Plugin {#BackStage-3.Plugin-JenkinsPlugin}
+# Jenkins Plugin 
 
 -   **참고**
     -   [Jenkins Plugin (Frontend)](https://github.com/backstage/backstage/tree/master/plugins/jenkins)
@@ -107,35 +62,34 @@ Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog > TODO �
 
 Jenkins Plugin 은 Jenkins 에서 제공하는 ([Jenkins 공식문서](https://www.jenkins.io/doc/book/using/remote-access-api/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
 
-### Jenkins 접속 정보 {#BackStage-3.Plugin-Jenkins접속정보}
+### Jenkins 접속 정보
 
 -   [http://192.168.41.50:8080/](http://192.168.41.50:8080/)
 -   admin
 -   osckorea!
 
-### Jenkins Build, Job Info 확인 {#BackStage-3.Plugin-JenkinsBuild,JobInfo확인}
+### Jenkins Build, Job Info 확인 
 
-#### Latest Build {#BackStage-3.Plugin-LatestBuild}
+#### Latest Build 
 
 ![image-20240111-003324.png](assets/973373654/973373763.png?width=581)
 
-#### Jenkins project list {#BackStage-3.Plugin-Jenkinsprojectlist}
+#### Jenkins project list
 
 ![jenkins-1.png](assets/973373654/973373766.png?width=760)
 
-#### View summary of a build {#BackStage-3.Plugin-Viewsummaryofabuild}
-
+#### View summary of a build 
 ![jenkins-2.png](assets/973373654/973373760.png?width=531)
 
-#### Jenkins job list {#BackStage-3.Plugin-Jenkinsjoblist}
+#### Jenkins job list 
 
 ![jenkins-3.png](assets/973373654/973373757.png?width=760)
 
-### Jenkins API Token 발급 {#BackStage-3.Plugin-JenkinsAPIToken발급}
+### Jenkins API Token 발급 
 
 ![](assets/973373654/973373802.png?width=760)
 
-### setting {#BackStage-3.Plugin-setting}
+### setting 
 
 -   app-config.yaml
  
@@ -177,7 +131,7 @@ metadata:
 
     -   {jenkins instance name}:{job name}
 
-# Nexus Repository Manager Plugin (**Image**) {#BackStage-3.Plugin-NexusRepositoryManagerPlugin(Image)}
+# Nexus Repository Manager Plugin (**Image**) 
 
 -   **참고**
 
@@ -188,19 +142,18 @@ metadata:
 Nexus Repository Manager Plugin 은 Nexus 에서 제공하는 ([Nexus
 공식문서](https://help.sonatype.com/repomanager3/integrations/rest-and-integration-api/repositories-api)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
 
-### Nexus 접속정보 {#BackStage-3.Plugin-Nexus접속정보}
-
--   [http://192.168.41.50:8081/#browse/browse](http://192.168.41.50:8081/#browse/browse)
+### Nexus 접속정보 
+-   [https://nexus-oscka.openmsa.monster](https://nexus-oscka.openmsa.monster)
 -   admin
 -   osckorea!
 
-### build artifacts 조회 {#BackStage-3.Plugin-buildartifacts조회}
+### build artifacts 조회 
 
 ![](assets/973373654/973373787.png?width=760)
 
 BUILD ARTIFACTS 탭에는 **VERSION** , **REPOSITORY** , **REPOSITORY TYPE** , **MANIFEST** , **MODIFIED** 및 **SIZE** 와 같은 빌드 아티팩트 및 관련 정보 목록이 포함되어 있습니다 .
 
-### setting {#BackStage-3.Plugin-setting.1}
+### setting
 
 
 
@@ -262,7 +215,7 @@ annotation 확인
 (**[**여기**](https://github.com/janus-idp/backstage-plugins/blob/main/plugins/nexus-repository-manager/ANNOTATIONS.md)**)** 한 후 빌드 결과물과 일치하는 annotation 을 사용하면
 됩니다.
 
-# SonarQube Plugin {#BackStage-3.Plugin-SonarQubePlugin}
+## SonarQube Plugin
 
 **참고**
 [https://github.com/backstage/backstage/blob/master/plugins/sonarqube/README.md](https://github.com/backstage/backstage/blob/master/plugins/sonarqube/README.md)
@@ -270,17 +223,17 @@ annotation 확인
 SonarQube Plugin 은 SonarQube 에서 제공하는 ([SonarQube
 공식문서](https://docs.sonarsource.com/sonarqube/9.9/extension-guide/web-api/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
 
-### SonarQube 접속 정보 {#BackStage-3.Plugin-SonarQube접속정보}
+### SonarQube 접속 정보
 
 -   [http://192.168.41.50:9000/projects](http://192.168.41.50:9000/projects)
 -   admin
 -   osckorea!
 
-### Code Quality 확인 {#BackStage-3.Plugin-CodeQuality확인}
+### Code Quality 확인 
 
 ![image-20240111-003805.png](assets/973373654/973373754.png?width=771)
 
-### setting {#BackStage-3.Plugin-setting.2}
+### setting 
 
 -   SonarQube Token 발급
 
@@ -314,7 +267,7 @@ metadata:
 
     -   `sonarqube.org/project-key: default/evelyn0410_starter`
 
-# Argo CD Plugin {#BackStage-3.Plugin-ArgoCDPlugin}
+## Argo CD Plugin
 
 -   참고
 
@@ -326,7 +279,7 @@ metadata:
 ArgoCD Plugin 은 ArgoCD 에서 제공하는([ArgoCD 공식문서](https://argo-cd.readthedocs.io/en/stable/developer-guide/api-docs/)) REST API 를 호출하는 코드를 라이브러리로 만든 것입니다.
 Backstage 카탈로그에 Application 의 현재 상태를 표시할 수 있습니다.
 
-### ArgoCD over view {#BackStage-3.Plugin-ArgoCDoverview}
+### ArgoCD over view
 
 ![image-20240111-021258.png](assets/973373654/973373742.png?width=760)
 ![](assets/973373654/973373781.png?width=727)
@@ -344,7 +297,7 @@ Backstage 카탈로그에 Application 의 현재 상태를 표시할 수 있습�
 
 Application 의 history 를 조회할 수 있고, history revision Limit 설정도 가능하다.
 
-### ArgoCD - User, RBAC, Token {#BackStage-3.Plugin-ArgoCD-User,RBAC,Token}
+### ArgoCD - User, RBAC, Token
 
 -   **참고**
 
@@ -365,7 +318,7 @@ admin 사용자에게 apiKey 기능이 없는 이유라는 점을 명심하세�
 [[#6687(댓글)]](https://github.com/argoproj/argo-cd/issues/6687#issuecomment-878887020)
 
 
-#### argocd user 생성 {#BackStage-3.Plugin-argocduser생성}
+#### argocd user 생성
  
 ```shell
 kubectl edit configmap argocd-cm -n argocd
@@ -389,7 +342,7 @@ kind: ConfigMap
 
     -   data 하위에 `accounts.oscka: apiKey,login` 추가
 
-#### 생성한 user role 수정 {#BackStage-3.Plugin-생성한userrole수정}
+#### 생성한 user role 수정
  
 ```yaml
 # vi argocd-rbac-cm.yaml
@@ -417,7 +370,7 @@ kind: ConfigMap
 
 운영 환경에서는 사용자에 특정 ROLE 을 지정해야하지만, 테스트 단계이므로 본문에서는 admin ROLE 을 부여합니다.
 
-#### user password 생성 {#BackStage-3.Plugin-userpassword생성}
+#### user password 생성
 ```shell
 # -- Get full users list
 ➜  argocd account list
@@ -435,7 +388,7 @@ Password updated
 
     -   admin 계정의 password 필요
 
-#### argocd token 발급 {#BackStage-3.Plugin-argocdtoken발급}
+#### argocd token 발급
 
  
 ```shell
@@ -451,7 +404,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJvc2NrYTphcGl
 
 또는 Argo CD UI의 `/settings/accounts/<your-account>`\"Tokens\" 섹션에서 \"Generate New\"을 클릭하면 됩니다.
 
-#### argocd account 확인 {#BackStage-3.Plugin-argocdaccount확인}
+#### argocd account 확인
 
  
  
@@ -472,7 +425,7 @@ ID                                    ISSUED AT                  EXPIRING AT
 Capabiliteis 에 apiKey 가 있고, Token 이 발급되어 있는것을 확인할 수 있습니다. (만료일 없음)
 
 
-### setting {#BackStage-3.Plugin-setting.3}
+### setting
 
 -   app-config.yaml
 ```yaml
@@ -506,16 +459,16 @@ metadata:
 
     -   `argocd/app-name: starter`
 
-# GitHub Actions Plugin {#BackStage-3.Plugin-GitHubActionsPlugin}
+# GitHub Actions Plugin
 
 -   **참고**
     -   [GitHub Action Plugin](https://github.com/backstage/backstage/tree/master/plugins/github-actions)
 
-### GitHub Actions 확인 {#BackStage-3.Plugin-GitHubActions확인}
+### GitHub Actions 확인
 
 ![image-20240111-024922.png](assets/973373654/973373739.png?width=760)
 
-### **Provide OAuth credentials** {#BackStage-3.Plugin-ProvideOAuthcredentials}
+### **Provide OAuth credentials** 
 
 ![github-action-1.png](assets/973373654/973373736.png?width=760)
 ![image-20240111-043530.png](assets/973373654/973373733.png?width=760)
@@ -531,7 +484,7 @@ metadata:
     가져와 AUTH_GITHUB_CLIENT_ID 및 AUTH_GITHUB_CLIENT_SECRET
     environment 에 입력합니다.
 
-### Setting {#BackStage-3.Plugin-Setting}
+### Setting
 
 -   Install the plugin dependency in your Backstage app package
 
@@ -574,9 +527,9 @@ metadata:
 
     -   `github.com/project-slug`
 
-# env {#BackStage-3.Plugin-env}
+# env
 
-## start.ps1 (window PowerShell) {#BackStage-3.Plugin-start.ps1(windowPowerShell)}
+## start.ps1 (window PowerShell) 
  
 ```powershell
 # vi start.ps1
@@ -608,7 +561,7 @@ Write-Host "Initializing process..."
 
  
 
-## environment.sh (mac, linux) {#BackStage-3.Plugin-environment.sh(mac,linux)}
+## environment.sh (mac, linux) 
 ```shell
 # vi environment.sh
 export POSTGRES_HOST="localhost"
@@ -635,9 +588,9 @@ export ARGOCD_AUTH_TOKEN="argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJp
 
  
 
-# 추가 Plugins? {#BackStage-3.Plugin-추가Plugins?}
+# 추가 Plugins? 
 
-### **Source Control Mgmt** {#BackStage-3.Plugin-SourceControlMgmt}
+### **Source Control Mgmt**
 
 -   GitHub Insights Plugin
     -   [https://roadie.io/backstage/plugins/github-insights/?utm_source=backstage.io&utm_medium=marketplace&utm_campaign=github-insights](https://roadie.io/backstage/plugins/github-insights/?utm_source=backstage.io&utm_medium=marketplace&utm_campaign=github-insights)
@@ -645,7 +598,7 @@ export ARGOCD_AUTH_TOKEN="argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJp
 -   GitHub Pull Requests Plugin
     -   [https://roadie.io/backstage/plugins/github-pull-requests/?utm_source=backstage.io&utm_medium=marketplace&utm_campaign=github-pull-requests](https://roadie.io/backstage/plugins/github-pull-requests/?utm_source=backstage.io&utm_medium=marketplace&utm_campaign=github-pull-requests)
 
-### CI/CD {#BackStage-3.Plugin-CI/CD}
+### CI/CD 
 
 -   GitLab
     -   [https://github.com/immobiliare/backstage-plugin-gitlab](https://github.com/immobiliare/backstage-plugin-gitlab)
@@ -654,7 +607,7 @@ export ARGOCD_AUTH_TOKEN="argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJp
 
     -   [https://github.com/container-registry/backstage-plugin-harbor](https://github.com/container-registry/backstage-plugin-harbor)
 
-### **Agile Planning** {#BackStage-3.Plugin-AgilePlanning}
+### **Agile Planning**
 
 -   Jira
 
@@ -668,7 +621,7 @@ export ARGOCD_AUTH_TOKEN="argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJp
 
     -   [https://github.com/AxisCommunications/backstage-plugins/blob/main/plugins/jira-dashboard/README.md](https://github.com/AxisCommunications/backstage-plugins/blob/main/plugins/jira-dashboard/README.md)
 
-### Monitoring {#BackStage-3.Plugin-Monitoring}
+### Monitoring
 
 -   Prometheus
 
@@ -681,7 +634,7 @@ export ARGOCD_AUTH_TOKEN="argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJp
 
     -   [https://github.com/K-Phoen/backstage-plugin-grafana/](https://github.com/K-Phoen/backstage-plugin-grafana/)
 
-### **Security** {#BackStage-3.Plugin-Security}
+### **Security** 
 
 -   Valut
 
