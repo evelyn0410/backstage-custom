@@ -6,3 +6,5 @@ metadata:
 spec:
   targets:
     - ./apis/petstore.yaml
+    - ./apis/argocd.yaml
+    - ./apis/nexus-repo-manager-3.yaml

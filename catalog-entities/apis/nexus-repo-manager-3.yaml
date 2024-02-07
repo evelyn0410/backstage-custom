@@ -15,4 +15,4 @@ spec:
   owner: team-devops
   lifecycle: production
   definition:
-    $openapi: https://github.com/janus-idp/backstage-showcase/blob/main/catalog-entities/apis/nexus-swagger.json
+    $openapi: https://github.com/evelyn0410/backstage-custom/blob/main/catalog-entities/apis/nexus-swagger.json
