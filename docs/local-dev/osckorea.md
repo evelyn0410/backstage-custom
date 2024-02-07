@@ -46,6 +46,7 @@ for mac
 
 backstage custom 코드는 GitHub  (  GitHub - evelyn0410/backstage-custom: backstage custom project  ) 에서 확인할 수 있습니다.
 
+## 연동 정보
 Backstage 는 아래 솔루션과 연동돼있으며 각 접속정보는 아래에서 확인하시면 됩니다.
 
 **SonarQube**
@@ -70,4 +71,3 @@ Password | osckorea!
 
 
 
-## 

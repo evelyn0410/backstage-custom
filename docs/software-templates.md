@@ -15,7 +15,7 @@ Edit, preview, and try out templates and template forms
 /import/entity
 
 
-# 참고 https://roadie.io/docs/scaffolder/troubleshooting/
+### 참고 https://roadie.io/docs/scaffolder/troubleshooting/
 
 ## 테스트
 현재 Backstage에서는 템플릿 테스트가 잘 지원되지 않습니다. 그 이유는 주로 많은 스캐폴더 작업이 부작용을 수행한다는 사실 때문입니다.
@@ -33,15 +33,6 @@ Edit, preview, and try out templates and template forms
 템플릿 작성은 때때로 약간 번거로울 수 있습니다. 문제의 원인을 파악하는 데 도움이 될 수 있도록 과거에 본 오류 목록을 정리했습니다.
 
 /templates/edit템플릿 YAML 입력 양식은 테스트 주기를 가속화하는 라이브 템플릿 미리보기 뷰어를 사용하여 테스트할 수도 있습니다 .
-
-
-
-
-
-
-
-
-
 
 
 

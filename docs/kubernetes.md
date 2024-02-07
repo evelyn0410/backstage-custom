@@ -52,7 +52,7 @@ k8s 리소스 를 YAML 형태로 볼수 있고, Pod 의 로그 조회도 가능�
 Pod , Deployment 등 K8s 리소스에서 Error 가 발생할경우 Error Reporting 테이블이 생성되며
  Cluster Name, k8s api resource 종류와 이름, Message 를 확인할 수 있습니다.
 
-# Kubernetes Cluster Config
+## Kubernetes Cluster Config
 
 -   참고
     -   [https://backstage.io/docs/features/kubernetes/installation](https://backstage.io/docs/features/kubernetes/installation)
@@ -178,9 +178,9 @@ images:
 ```
 
 
-# Setting
+## Setting
 
-## app-config.yaml 
+### app-config.yaml 
 
 ```yaml
 kubernetes:
@@ -227,7 +227,7 @@ metadata:
 
 ------------------------------------------------------------------------
 
-# 참고
+## 참고
 
 -   [How to monitor your services on Kubernetes with Backstage (Demo)](https://www.youtube.com/watch?v=VivuOxn3VQ8&t=12s)
 

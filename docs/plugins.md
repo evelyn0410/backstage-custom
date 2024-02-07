@@ -6,7 +6,7 @@ description: Documentation on Introduction to Plugins
 
 
 
-# 개요
+## 개요
 
 - **참고**
   - [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
@@ -27,7 +27,7 @@ Plugin 추가 작업은 대부분 아래와 같은 순서로 진행됩니다.
 
 4.  **catalog-info.yaml** 에 annotation 추가
 
-# TODO Plugin 
+## TODO Plugin 
 
 **참고**
 [https://github.com/backstage/backstage/tree/master/plugins/todo](https://github.com/backstage/backstage/tree/master/plugins/todo)
@@ -53,7 +53,7 @@ Backstage 에서는 소스 코드 상에 TODO 로 남긴 것을 Catalog > TODO �
 확인할 수 있으며, File 을 클릭하면 Github 에 커밋된 파일로 이동할수 있습니다.
 
 
-# Jenkins Plugin 
+## Jenkins Plugin 
 
 -   **참고**
     -   [Jenkins Plugin (Frontend)](https://github.com/backstage/backstage/tree/master/plugins/jenkins)
@@ -131,7 +131,7 @@ metadata:
 
     -   {jenkins instance name}:{job name}
 
-# Nexus Repository Manager Plugin (**Image**) 
+## Nexus Repository Manager Plugin (**Image**) 
 
 -   **참고**
 
@@ -527,9 +527,9 @@ metadata:
 
     -   `github.com/project-slug`
 
-# env
+## env
 
-## start.ps1 (window PowerShell) 
+### start.ps1 (window PowerShell) 
  
 ```powershell
 # vi start.ps1
@@ -561,7 +561,7 @@ Write-Host "Initializing process..."
 
  
 
-## environment.sh (mac, linux) 
+### environment.sh (mac, linux) 
 ```shell
 # vi environment.sh
 export POSTGRES_HOST="localhost"
@@ -588,7 +588,7 @@ export ARGOCD_AUTH_TOKEN="argocd.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJp
 
  
 
-# 추가 Plugins? 
+## 추가 Plugins? 
 
 ### **Source Control Mgmt**
 

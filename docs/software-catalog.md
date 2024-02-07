@@ -7,14 +7,14 @@ description: The Backstage Software Catalog
 ---
 
 
-# 개요
+## 개요
 
 **참고**
 
 -   [Backstage.io 검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
 -   [https://backstage.io/docs/features/software-catalog/](https://backstage.io/docs/features/software-catalog/)
 
-## What is a Software Catalog?
+### What is a Software Catalog?
 
 ![](assets/973373541/973373619.png)
 
@@ -23,7 +23,7 @@ Backstage 의 Software Catalog (이하 카탈로그)는 ecosystem 의 모든 소
 
 카탈로그는 코드와 함께 저장된 [메타데이터 YAML](https://backstage.io/docs/features/software-catalog/descriptor-format) 파일 의 개념을 중심으로 구축되며,이 파일은 Backstage 에서 수집되고 시각화됩니다.
 
-## Catalog 가 가져오는 효과
+### Catalog 가 가져오는 효과
 
 Catalog 는 두 가지 주요 사용 사례를 지원합니다
 
@@ -36,7 +36,7 @@ Catalog 는 두 가지 주요 사용 사례를 지원합니다
     -   소프트웨어 에코시스템의 어두운 구석에 숨어 있는 고아
         소프트웨어가 더 이상 존재하지 않습니다.
 
-## Finding software in the catalog
+### Finding software in the catalog
 
 ![bsc-search-51a9aa0cdb9eb883d2bcf2451bc81362.png](assets/973373541/973373595.png?width=760)
 
@@ -46,7 +46,7 @@ Catalog 는 두 가지 주요 사용 사례를 지원합니다
 
 기본 인라인 검색 및 열 필터링을 사용하면 대규모 components 집합을 쉽게 찾아볼 수 있습니다.
 
-## Starring components
+### Starring components
 
 ![bsc-starred-7c2f867de967e254b190aac28e55bd0b.png](assets/973373541/973373598.png?width=760)
 
@@ -62,12 +62,12 @@ Catalog 는 두 가지 주요 사용 사례를 지원합니다
     대부분의 도구를 카탈로그의 엔티티를 중심으로 구성할 수 있습니다.
     
 
-# Catalog 에 components 추가
+## Catalog 에 components 추가
 
 카탈로그의 구성 요소에 대한 진실의 출처는 Source Control (GitHub, GitHub Enterprise, GitLab, ...)에 저장된 [메타데이터 YAML 파일](https://backstage.io/docs/features/software-catalog/descriptor-format) 입니다.
 
 
-## GitHub 연동 설정 (GitHub Integration)
+### GitHub 연동 설정 (GitHub Integration)
 
 **참고**
 [https://backstage.io/docs/integrations/github/locations](https://backstage.io/docs/integrations/github/locations)
@@ -164,12 +164,12 @@ catalog:
 ```
 
 
-# Catalog - Component
+## Catalog - Component
 
 **참고** [Descriptor Format of Catalog Entities](https://backstage.io/docs/features/software-catalog/descriptor-format)
 
 
-## catalog-info.yaml
+### catalog-info.yaml
 
 ```yaml
 # vi catalog-info.yaml
@@ -245,14 +245,14 @@ spec:
 
     -   `backstage.io/managed-by-location: url:https://github.com/evelyn0410/starter/blob/main/catalog-info.yaml `
 
-# Catalog - System, Group
+## Catalog - System, Group
 
 -   참고
 
     -   [Descriptor Format of Catalog
         Entities](https://backstage.io/docs/features/software-catalog/descriptor-format)
 
-## app-config.yaml
+### app-config.yaml
 
 ```yaml
 catalog:
@@ -292,7 +292,7 @@ catalog:
                     - type: file
                       target: ../../catalog-entities/all.yaml
                 ```
-## yaml file example
+### yaml file example
 
 ```yaml
 ---
@@ -453,9 +453,9 @@ spec:
 
 ------------------------------------------------------------------------
 
-# env
+## env
 
-## start.ps1 (window)
+### start.ps1 (window)
 ```powershell
 # vi start.ps1
 Write-Host "Setting environment variables...";
@@ -469,7 +469,7 @@ Write-Host "Initializing process..."
 
 
 
-## environment.sh (mac, linux)
+### environment.sh (mac, linux)
  
 ```shell
 # vi environment.sh

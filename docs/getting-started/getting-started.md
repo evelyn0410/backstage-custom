@@ -4,7 +4,7 @@ title: Getting Start
 description: Documentation on How to get started with Backstage
 ---
 
-# 개요
+## 개요
 
 **참고**
 -   [Backstage.io검토](https://osc-korea.atlassian.net/wiki/spaces/consulting/pages/955842620)
@@ -14,17 +14,13 @@ description: Documentation on How to get started with Backstage
 Kubernetes , Catalog 기능을 테스트 하기전에 BackStage App 을 만드는
 과정이 필요합니다.
 
-Backstage 의 Frontend 는 [**React**](https://react.dev)
-
- , Backend 는 [**Node.js**](https://nodejs.org/)  으로
-
-개발돼있고 전부 [**Typescript**](https://www.typescriptlang.org/) 를 사용하고 있습니다.
+Backstage 의 Frontend 는 [**React**](https://react.dev) , Backend 는 [**Node.js**](https://nodejs.org/)  으로 개발돼있고 전부 [**Typescript**](https://www.typescriptlang.org/) 를 사용하고 있습니다.
 
  
 
-# Create Backstage App
+## Create Backstage App
 
-## 사전 설치 (Prerequisites)
+### 사전 설치 (Prerequisites)
 
 -   **node**
     -   install
@@ -130,7 +126,7 @@ app
 
 
 
-# 저장소를 PostgreSQL 로 변경   
+## 저장소를 PostgreSQL 로 변경   
 
 **참고**
 [https://backstage.io/docs/getting-started/configuration](https://backstage.io/docs/getting-started/configuration)
@@ -198,7 +194,7 @@ List of databases
 
 
 
-# env 관리
+## env 관리
 
 env 를 운영환경 (dev,stg,prd) 마다 다르게 적용할 수도 있고, Github 에 public 으로 소스코드를 커밋할 경우 노출하고싶지 않은 정보를 하나의 파일에 작성후 .gitignore 에 등록하여 env 를 관리한다.
 
